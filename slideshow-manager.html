@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <title>H.E.A.R.T.S. Slideshow Manager</title>
+  <meta name="robots" content="noindex, nofollow"/>
+  <link rel="icon" type="image/png" href="hearts-logo-sm.png"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <script src="photos.js"></script>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    body{background:#F7F3EE;color:#1C1C1A;font-family:'Manrope',sans-serif;-webkit-font-smoothing:antialiased}
+    img{display:block;max-width:100%}
+    a{text-decoration:none;color:#B07845}a:hover{color:#C4824A}
+    .sl{transition:border-color .18s,background .18s}
+    .sl:hover{border-color:#C4824A}
+    .pp{cursor:pointer;transition:transform .18s,box-shadow .18s}
+    .pp:hover{transform:translateY(-3px);box-shadow:0 10px 30px rgba(0,0,0,.14)}
+    @media(max-width:1000px){.mgcols{flex-direction:column!important}.mgslots{max-width:none!important;flex:none!important}}
+  </style>
+<style id="perf-css">#hn-nav{transform:translateZ(0);will-change:transform}</style>
+</helmet>
+
+<div style="max-width:1440px;margin:0 auto;padding:48px 40px 90px;">
+
+  <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:28px;flex-wrap:wrap;border-bottom:1px solid #E3D9CC;padding-bottom:26px;margin-bottom:36px;">
+    <div>
+      <p style="font-size:10px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:#B07845;margin-bottom:12px;">Admin · not linked publicly</p>
+      <h1 style="font-family:'Cormorant Garamond',serif;font-size:44px;font-weight:400;letter-spacing:-.01em;line-height:1.1;">Slideshow Manager</h1>
+      <p style="font-size:14px;color:#5A524A;font-weight:300;margin-top:10px;max-width:640px;line-height:1.7;">Click a slot on the left, then click the matching photo on the right. Drag a photo onto a slot, or drag between slots to swap. Nothing here deletes or alters an original photograph.</p>
+    </div>
+    <a href="index.html" style="font-size:10px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;border:1px solid rgba(0,0,0,.2);color:#1C1C1A;padding:14px 26px;">← Back to site</a>
+  </div>
+
+  <div class="mgcols" style="display:flex;gap:40px;align-items:flex-start;">
+
+    <!-- SLOTS -->
+    <div class="mgslots" style="flex:0 0 440px;max-width:440px;position:relative;">
+      <p style="font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:#9B8B7B;margin-bottom:18px;">Slideshow order — {{ filledCount }} of {{ slotCount }} filled</p>
+
+      <div style="display:flex;flex-direction:column;gap:10px;">
+        <sc-for list="{{ slots }}" as="s" hint-placeholder-count="12">
+          <div class="sl" draggable="true" onClick="{{ s.onSelect }}" onDragStart="{{ s.onDragStart }}" onDragOver="{{ s.onDragOver }}" onDrop="{{ s.onDrop }}" style="display:flex;align-items:center;gap:16px;padding:10px 14px 10px 10px;background:{{ s.bg }};border:1px solid {{ s.bc }};cursor:pointer;">
+            <span style="font-size:11px;font-weight:600;letter-spacing:.12em;color:#9B8B7B;width:22px;flex-shrink:0;">{{ s.num }}</span>
+            <sc-if value="{{ s.filled }}" hint-placeholder-val="{{ true }}">
+              <img src="{{ s.thumb }}" alt="" style="width:104px;height:70px;object-fit:cover;flex-shrink:0;background:#E3D9CC;"/>
+            </sc-if>
+            <sc-if value="{{ s.empty }}">
+              <span style="width:104px;height:70px;flex-shrink:0;border:1px dashed #C8B9A8;display:flex;align-items:center;justify-content:center;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:#B3A493;">Empty</span>
+            </sc-if>
+            <span style="flex:1;min-width:0;">
+              <span style="display:block;font-family:'Cormorant Garamond',serif;font-size:19px;line-height:1.25;color:#1C1C1A;">{{ s.desc }}</span>
+              <span style="display:block;font-size:11px;color:#9B8B7B;margin-top:4px;">{{ s.filename }}</span>
+            </span>
+            <sc-if value="{{ s.filled }}">
+              <button onClick="{{ s.onRemove }}" title="Remove from slideshow" style="flex-shrink:0;background:none;border:1px solid #E3D9CC;width:26px;height:26px;cursor:pointer;color:#9B8B7B;font-size:13px;line-height:1;">×</button>
+            </sc-if>
+          </div>
+        </sc-for>
+      </div>
+
+      <div style="display:flex;gap:10px;margin-top:18px;flex-wrap:wrap;">
+        <button onClick="{{ addSlot }}" style="background:none;border:1px dashed #C8B9A8;color:#7A7060;font-family:'Manrope',sans-serif;font-size:10px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;padding:12px 20px;cursor:pointer;">+ Add slide</button>
+        <button onClick="{{ clearAll }}" style="background:none;border:1px solid #E3D9CC;color:#9B8B7B;font-family:'Manrope',sans-serif;font-size:10px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;padding:12px 20px;cursor:pointer;">Clear all slots</button>
+      </div>
+
+      <div style="margin-top:30px;padding:26px 24px;background:#2E4A5E;">
+        <p style="font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:14px;">Save &amp; publish</p>
+        <button onClick="{{ save }}" style="width:100%;background:#C4824A;border:none;color:white;font-family:'Manrope',sans-serif;font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;padding:16px;cursor:pointer;">Save order</button>
+        <button onClick="{{ download }}" style="width:100%;margin-top:10px;background:none;border:1px solid rgba(255,255,255,.4);color:white;font-family:'Manrope',sans-serif;font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;padding:15px;cursor:pointer;">Download slideshow-order.json</button>
+        <p style="font-size:12px;color:rgba(255,255,255,.72);line-height:1.65;font-weight:300;margin-top:16px;">“Save order” updates the slideshow in this browser right away. To publish it to everyone, download the JSON file and drop it into the website folder next to index.html.</p>
+        <p style="font-size:12px;color:#F0C9A0;line-height:1.6;margin-top:12px;min-height:18px;">{{ msg }}</p>
+      </div>
+
+      <div style="margin-top:22px;">
+        <p style="font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:#9B8B7B;margin-bottom:10px;">Paste-back list</p>
+        <textarea readonly rows="6" style="width:100%;border:1px solid #E3D9CC;background:white;padding:14px;font-family:'Manrope',sans-serif;font-size:12px;line-height:1.7;color:#5A524A;resize:vertical;">{{ pasteList }}</textarea>
+      </div>
+    </div>
+
+    <!-- POOL -->
+    <div style="flex:1;min-width:0;">
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:18px;">
+        <p style="font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:#9B8B7B;">All photographs — {{ poolCount }} available</p>
+        <input type="text" placeholder="Filter by name…" onInput="{{ onSearch }}" style="border:1px solid #E3D9CC;background:white;padding:11px 14px;font-family:'Manrope',sans-serif;font-size:13px;color:#1C1C1A;outline:none;width:230px;"/>
+      </div>
+      <p style="font-size:13px;color:#5A524A;font-weight:300;line-height:1.7;margin-bottom:20px;">Selected slot: <strong style="font-weight:600;color:#B07845;">{{ selLabel }}</strong> — click a photo below to place it there.</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:14px;">
+        <sc-for list="{{ pool }}" as="p" hint-placeholder-count="12">
+          <div class="pp" draggable="true" onClick="{{ p.onClick }}" onDragStart="{{ p.onDragStart }}" style="background:white;border:1px solid {{ p.bc }};padding:6px;position:relative;">
+            <img src="{{ p.thumb }}" alt="{{ p.name }}" loading="lazy" style="width:100%;aspect-ratio:4/3;object-fit:cover;background:#EDE4D8;"/>
+            <p style="font-size:11px;color:#5A524A;margin-top:8px;line-height:1.4;word-break:break-word;">{{ p.name }}</p>
+            <sc-if value="{{ p.used }}">
+              <span style="position:absolute;top:10px;left:10px;background:#C4824A;color:white;font-size:9px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:4px 8px;">In slideshow · {{ p.usedAt }}</span>
+            </sc-if>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+const LS = 'hearts-slideshow-order-v2';
+
+class Component extends DCLogic {
+  state = { slots: [], q: '', msg: '', sel: 0, drag: null };
+
+  componentDidMount() {
+    const descs = (window.HEARTS_SLOTS || []).slice();
+    let slots = descs.map(d => ({ desc: d, src: null }));
+    try {
+      const raw = localStorage.getItem(LS);
+      if (raw) {
+        const saved = JSON.parse(raw);
+        if (Array.isArray(saved)) {
+          saved.forEach((src, i) => {
+            if (!slots[i]) slots[i] = { desc: 'Additional slide', src: null };
+            slots[i].src = src;
+          });
+        }
+      }
+    } catch (e) {}
+    this.setState({ slots });
+  }
+
+  photos() { return window.HEARTS_PHOTOS || []; }
+
+  nameFor(src) {
+    const p = this.photos().find(x => x.src === src);
+    return p ? p.name : (src ? decodeURIComponent(src.split('/').pop()) : '');
+  }
+
+  place(src) {
+    const slots = this.state.slots.map(s => ({ ...s }));
+    let i = this.state.sel;
+    if (i == null || i < 0 || i >= slots.length) i = slots.findIndex(s => !s.src);
+    if (i < 0) { slots.push({ desc: 'Additional slide', src }); }
+    else slots[i].src = src;
+    const next = slots.findIndex((s, k) => k > i && !s.src);
+    this.setState({ slots, sel: next >= 0 ? next : i, msg: '' });
+  }
+
+  swap(from, to) {
+    if (from === to) return;
+    const slots = this.state.slots.map(s => ({ ...s }));
+    const a = slots[from].src; slots[from].src = slots[to].src; slots[to].src = a;
+    this.setState({ slots, msg: '' });
+  }
+
+  renderVals() {
+    const q = this.state.q.trim().toLowerCase();
+    const slots = this.state.slots;
+    const usedIndex = {};
+    slots.forEach((s, i) => { if (s.src) usedIndex[s.src] = String(i + 1).padStart(2, '0'); });
+
+    const slotVals = slots.map((s, i) => ({
+      num: String(i + 1).padStart(2, '0'),
+      desc: s.desc,
+      filename: s.src ? this.nameFor(s.src) : 'No photo chosen yet',
+      src: s.src,
+      thumb: s.src ? s.src + '?format=600w' : '',
+      filled: !!s.src,
+      empty: !s.src,
+      bg: this.state.sel === i ? '#FFF6EC' : 'white',
+      bc: this.state.sel === i ? '#C4824A' : '#E3D9CC',
+      onSelect: () => this.setState({ sel: i }),
+      onRemove: (e) => {
+        e.stopPropagation();
+        const ns = slots.map(x => ({ ...x })); ns[i].src = null;
+        this.setState({ slots: ns, sel: i, msg: '' });
+      },
+      onDragStart: (e) => { this.setState({ drag: { type: 'slot', i } }); try { e.dataTransfer.setData('text/plain', String(i)); } catch (err) {} },
+      onDragOver: (e) => e.preventDefault(),
+      onDrop: (e) => {
+        e.preventDefault();
+        const d = this.state.drag;
+        if (!d) return;
+        if (d.type === 'slot') this.swap(d.i, i);
+        else { const ns = slots.map(x => ({ ...x })); ns[i].src = d.src; this.setState({ slots: ns, sel: i, msg: '' }); }
+        this.setState({ drag: null });
+      }
+    }));
+
+    const pool = this.photos()
+      .filter(p => !q || p.name.toLowerCase().includes(q))
+      .map(p => ({
+        name: p.name,
+        thumb: p.src + '?format=600w',
+        used: !!usedIndex[p.src],
+        usedAt: usedIndex[p.src] || '',
+        bc: usedIndex[p.src] ? '#C4824A' : '#E3D9CC',
+        onClick: () => this.place(p.src),
+        onDragStart: (e) => { this.setState({ drag: { type: 'pool', src: p.src } }); try { e.dataTransfer.setData('text/plain', p.src); } catch (err) {} }
+      }));
+
+    const chosen = slots.filter(s => s.src);
+    const selSlot = slots[this.state.sel];
+
+    return {
+      slots: slotVals,
+      pool,
+      poolCount: pool.length,
+      slotCount: slots.length,
+      filledCount: chosen.length,
+      msg: this.state.msg,
+      selLabel: selSlot ? String(this.state.sel + 1).padStart(2, '0') + ' — ' + selSlot.desc : 'none',
+      pasteList: chosen.length
+        ? chosen.map((s, i) => String(i + 1).padStart(2, '0') + '  ' + s.desc + '  →  ' + this.nameFor(s.src)).join('\n')
+        : 'No photos chosen yet.',
+      onSearch: (e) => this.setState({ q: e.target.value }),
+      addSlot: () => this.setState({ slots: slots.concat([{ desc: 'Additional slide', src: null }]), sel: slots.length }),
+      clearAll: () => this.setState({ slots: slots.map(s => ({ ...s, src: null })), sel: 0, msg: 'All slots cleared. Original photographs are untouched.' }),
+      save: () => {
+        const list = chosen.map(s => s.src);
+        if (!list.length) { this.setState({ msg: 'Nothing to save — place at least one photo first.' }); return; }
+        localStorage.setItem(LS, JSON.stringify(list));
+        this.setState({ msg: 'Saved. The homepage slideshow in this browser now uses this order.' });
+      },
+      download: () => {
+        const list = chosen.map(s => s.src);
+        const data = {
+          updated: new Date().toISOString(),
+          note: 'Generated by slideshow-manager.html. Drop this file in the website folder to publish the hero order.',
+          slides: list,
+          labels: chosen.map(s => s.desc)
+        };
+        const blob = new Blob([JSON.stringify(data, null, 1)], { type: 'application/json' });
+        const a = document.createElement('a');
+        a.href = URL.createObjectURL(blob);
+        a.download = 'slideshow-order.json';
+        document.body.appendChild(a); a.click(); a.remove();
+        this.setState({ msg: 'Downloaded. Replace slideshow-order.json in the website folder, then re-upload.' });
+      }
+    };
+  }
+}
+</script>
+</body>
+</html>

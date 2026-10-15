@@ -1,0 +1,1117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>H.E.A.R.T.S. Charitable Trust</title>
+<meta name="description" content="H.E.A.R.T.S. Charitable Trust, Ōtaki – equine-assisted, trauma-informed healing grounded in tikanga Māori. Restoring right relationship between people and horses.">
+  <link rel="icon" type="image/png" href="hearts-logo-sm.png"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <script src="photos.js"></script>
+  <script>function pickSubject(v){setTimeout(function(){var s=document.querySelector('select[name="subject"]');if(s){s.value=v;s.dispatchEvent(new Event('change'));}},0);}document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[data-subject]');if(a)pickSubject(a.getAttribute('data-subject'));});</script>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{background:#F7F3EE;color:#1C1C1A;font-family:'Manrope',sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+    img{display:block;max-width:100%}
+    a{text-decoration:none;color:inherit}
+    [data-reveal]{opacity:0;transform:translateY(22px);transition:opacity .9s cubic-bezier(.22,1,.36,1),transform .9s cubic-bezier(.22,1,.36,1)}
+    [data-reveal][data-vis]{opacity:1;transform:none}
+    [data-d="1"]{transition-delay:.15s}[data-d="2"]{transition-delay:.3s}[data-d="3"]{transition-delay:.45s}
+    .nav-s{background:rgba(253,250,246,.97)!important;padding-top:14px!important;padding-bottom:14px!important;box-shadow:0 1px 0 rgba(0,0,0,.07)!important}
+    .nav-s .ln{color:#1C1C1A!important}.nav-s .ls{color:#9B8B7B!important}.nav-s .na{color:#7A7060!important}.nav-s .bl{background:#1C1C1A!important}
+    .na:hover{color:white!important;opacity:1!important;font-weight:700!important;letter-spacing:.06em!important;transform:scale(1.08);transition:all .2s ease!important}.nav-s .na:hover{color:#1C1C1A!important;font-weight:700!important}
+    .mm{display:none;position:fixed;inset:0;z-index:998;background:#F3E6D3;flex-direction:column;align-items:center;justify-content:center;gap:40px}
+    .mm.open{display:flex}.mm a{font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:400;color:#1C1C1A;transition:color .2s}.mm a:hover{color:#B07845}
+    .ib{overflow:hidden}.ib img{transition:transform .9s ease}.ib:hover img{transform:scale(1.05)!important}
+    .btn-dk:hover{background:#A36035!important}.btn-ol:hover{background:rgba(255,255,255,.2)!important;border-color:rgba(255,255,255,.75)!important}
+    .btn-gh:hover{color:white!important;border-color:rgba(255,255,255,.6)!important}
+    .la:hover{letter-spacing:.22em!important;color:#C4824A!important}
+    @keyframes hZ{from{transform:scale(1.07)}to{transform:scale(1)}}
+    @keyframes fU{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:none}}
+    @media(max-width:900px){
+      .nl{display:none!important}.nb{display:flex!important}
+      .tc{flex-direction:column!important}
+      .cw{padding-left:24px!important;padding-right:24px!important}
+      .hcp{padding:0 24px 72px!important}
+      .isp{flex-wrap:wrap!important;height:auto!important}.isp>div{flex:0 0 50%!important;height:220px!important}
+      .ftc{flex-direction:column!important;gap:40px!important}
+      .sp{padding:80px 0!important}
+    }
+    @media(max-width:560px){.isp>div{flex:0 0 100%!important}}
+  
+    /* Dropdowns */
+    .dd{position:relative;display:flex;align-items:center;}
+    .dd::after{content:'';position:absolute;top:100%;left:0;right:0;height:14px;}
+    .dd-menu{position:absolute;top:calc(100% + 10px);left:50%;transform:translateX(-50%) translateY(-6px);min-width:210px;background:rgba(15,20,15,.72);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,.18);padding:8px 0;z-index:200;opacity:0;visibility:hidden;pointer-events:none;transition:opacity .2s ease,transform .2s ease,visibility .2s;box-shadow:0 8px 32px rgba(0,0,0,.3);}
+    .dd:hover .dd-menu{opacity:1;visibility:visible;pointer-events:all;transform:translateX(-50%) translateY(0);}
+    .dd-menu a{display:block;padding:11px 22px;font-size:10px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.8);transition:all .18s;border-left:2px solid transparent;}
+    .dd-menu a:hover{color:white;border-left-color:rgba(255,255,255,.6);padding-left:28px;background:rgba(255,255,255,.08);}
+    .dd-arr{font-size:5px;margin-left:2px;display:inline-block;transition:transform .2s;opacity:.3;}
+    .dd:hover .dd-arr{transform:rotate(180deg);}
+    .koha-btn:hover{background:#A36035!important;}
+    @media(max-width:1080px){
+      .nl{display:none!important}
+      .nb{display:flex!important}
+      .hearts-reg{display:none!important}
+      #tr-nav-lang{padding:8px 12px!important;font-size:9px!important}
+    }
+    #tr-nav-lang:hover{border-color:rgba(255,255,255,.75)!important;background:rgba(255,255,255,.1)!important;}
+    .nav-s #tr-nav-lang{border-color:rgba(0,0,0,.22)!important;color:#7A7060!important;}
+    .nav-s #tr-nav-lang:hover{background:rgba(0,0,0,.04)!important;color:#1C1C1A!important;}
+    .nav-s .hearts-reg{color:#B3A493!important}
+    @media(max-width:1180px){
+      .nl{gap:20px!important}
+      .nl .na{font-size:13px!important;letter-spacing:.05em!important}
+      #hn-nav{padding-left:14px!important;padding-right:26px!important}
+      #tr-nav-lang{padding:8px 12px!important;font-size:9px!important}
+    }
+        
+    #ss-progress{display:none!important;}
+    #hero-ss{z-index:1;}
+    .ss-fade{position:absolute;inset:0;transform:translateZ(0);background:#2B2519;-webkit-mask-image:linear-gradient(to bottom,#000 calc(100% - 260px),rgba(0,0,0,.75) calc(100% - 130px),rgba(0,0,0,.35) calc(100% - 50px),transparent);mask-image:linear-gradient(to bottom,#000 calc(100% - 260px),rgba(0,0,0,.75) calc(100% - 130px),rgba(0,0,0,.35) calc(100% - 50px),transparent);}
+    /* pillars overlap under hero fade */
+    .pillars-sec{position:relative;z-index:0;margin-top:-260px;padding-top:380px!important;background:linear-gradient(rgba(12,22,14,.5),rgba(12,22,14,.5)),url('bush-bg.jpg') center/cover no-repeat #1E2A1E!important;}
+    .pillars-sec .tc>div{background:rgba(255,255,255,.06)!important;border-color:rgba(255,255,255,.22)!important;}
+    .pillars-sec .tc h3,.pillars-sec .tc h2,.pillars-sec .tc p,.pillars-sec .tc span{color:#fff!important;}
+    .pillars-sec .tc p:first-child{color:rgba(255,255,255,.7)!important;}
+    .momatou-sec{padding-top:100px!important;}
+    /* ===== FULL MOBILE OVERRIDES ===== */
+    @media(max-width:768px){
+      .contact-grid{flex-direction:column!important;}
+      
+      .hearts-wordmark{font-size:22px!important;letter-spacing:.05em!important;}
+      .hearts-subtitle{font-size:7.5px!important;}
+      .hearts-reg{font-size:7px!important;letter-spacing:.06em!important;}
+      
+      /* NAV */
+      .koha-btn{display:none!important;}
+      #hn-nav{padding:14px 18px 14px 12px!important;}
+      .hearts-logo-img{height:51px!important;margin-left:-14px!important;}
+      .hearts-wordmark{font-size:26px!important;}
+      .hearts-subtitle{font-size:7.5px!important;letter-spacing:.14em!important;margin-left:.14em!important;margin-top:-4px!important;}
+      .hearts-reg{display:block!important;font-size:6px!important;letter-spacing:.06em!important;margin-left:0!important;margin-top:1px!important;text-align:center!important;}
+      .hearts-wordmark{margin-left:.05em!important;}
+      .nl{display:none!important;}
+      .nb{display:flex!important;}
+
+      /* MOBILE MENU */
+      .mm a{font-size:26px!important;}
+
+      /* HERO */
+      .hcp{padding:0 20px 48px!important;justify-content:flex-end!important;}
+      #ss-prev,#ss-next{display:none!important;}
+      #ss-dots{right:50%!important;transform:translateX(50%)!important;bottom:20px!important;}
+      .hero-btns{flex-direction:column!important;gap:8px!important;}
+      .hero-btns a{width:100%!important;justify-content:center!important;box-sizing:border-box!important;padding:12px 20px!important;font-size:9px!important;}
+      #hero-ss{height:85vh!important;height:85svh!important;min-height:480px!important;}
+      .hcp{padding-bottom:12px!important;}
+      #hero-ss .hero-btns{display:none!important;}
+      .hero-btns-m{display:flex!important;}
+      .pillars-sec{padding:272px 0 48px!important;}
+      section.pillars-sec{padding-left:0!important;padding-right:0!important;}
+      .pillars-sec .cw{padding-left:20px!important;padding-right:20px!important;}
+      .hero-btns-m{margin-bottom:96px!important;}
+      .momatou-sec{padding-top:80px!important;}
+      #tr-hero-maori{margin-bottom:8px!important;}
+      #tr-hero-sub{margin-bottom:18px!important;line-height:1.55!important;}
+      .hcp p{margin-bottom:18px!important;}
+      /* HERO HEADING smaller on mobile */
+      .hcp h1{font-size:clamp(28px,8vw,40px)!important;line-height:1.1!important;margin-bottom:10px!important;}
+      .hcp p{font-size:13px!important;margin-bottom:28px!important;}
+      .hcp [style*="font-size:9px"]{display:none!important;}
+
+      /* ALL SPLIT LAYOUTS */
+      .tc{flex-direction:column!important;}
+      .tc>div,.tc>section,.tc>a{min-height:auto!important;width:100%!important;}
+
+      /* SECTION PADDING */
+      .sp,.cw{padding-left:20px!important;padding-right:20px!important;}
+      section[style*="padding:120px"]{padding:60px 0!important;}
+      section[style*="padding:100px"]{padding:52px 0!important;}
+      section[style*="padding:80px"]{padding:48px 0!important;}
+
+      /* GAPS */
+      [style*="gap:80px"]{gap:32px!important;}
+      [style*="gap:72px"]{gap:28px!important;}
+
+      /* CONTENT PANELS that have large side padding */
+      [style*="padding:100px 80px"]{padding:40px 24px!important;}
+      [style*="padding:64px 60px"]{padding:36px 24px!important;}
+      [style*="padding:64px 64px"]{padding:36px 24px!important;}
+      [style*="padding:52px 48px"]{padding:36px 24px!important;}
+      [style*="padding:72px 64px"]{padding:36px 24px!important;}
+      [style*="padding:56px 52px"]{padding:36px 24px!important;}
+      [style*="padding:56px 56px"]{padding:36px 24px!important;}
+      [style*="padding:48px 40px"]{padding:32px 20px!important;}
+
+      /* IMAGE STRIP */
+      .isp{flex-direction:column!important;height:auto!important;}
+      .isp>div{width:100%!important;height:240px!important;flex:none!important;}
+
+      /* GRIDS */
+      .tg,.pg,.vg{grid-template-columns:1fr!important;}
+      [style*="grid-template-columns:1fr 1fr"]{grid-template-columns:1fr!important;}
+      [style*="grid-column:1/-1"]{grid-column:1!important;}
+
+      /* IMAGE MIN HEIGHTS in split layouts */
+      [style*="min-height:480px"]{min-height:260px!important;}
+      [style*="min-height:500px"]{min-height:260px!important;}
+      [style*="min-height:420px"]{min-height:240px!important;}
+      [style*="min-height:560px"]{min-height:280px!important;}
+
+      /* GALLERY */
+      .gmc{column-count:2!important;}
+
+      /* FOOTER */
+      .ftc{flex-direction:column!important;gap:32px!important;}
+      footer .ftc>div{flex:none!important;width:100%!important;}
+
+      /* VIDEO */
+      .vg{grid-template-columns:1fr!important;}
+
+      /* FORMS */
+      input,select,textarea{font-size:16px!important;} /* prevents iOS zoom */
+
+      /* QUOTE SECTION */
+      [style*="max-width:860px"]{padding:0 24px!important;}
+      [style*="max-width:960px"]{padding:0 24px!important;}
+
+      /* TESTIMONIAL FULL-WIDTH DARK CARD */
+      .tc>div[style*="flex-direction:row"]{flex-direction:column!important;}
+
+      /* HIDE large decorative numbers */
+      [style*="font-size:80px;font-weight:300;color:rgba(255,255,255"]{display:none!important;}
+
+      /* PULL QUOTE SPLIT */
+      .pq-split{flex-direction:column!important;}
+      .pq-split>div:last-child{min-height:300px!important;}
+      /* HERO HEADING */
+      .hcp h1{font-size:clamp(28px,8vw,42px)!important;line-height:1.06!important;white-space:normal!important;}
+      /* Māori subtitle */
+      #tr-hero-maori{font-size:14.5px!important;white-space:normal!important;line-height:1.4!important;margin-bottom:6px!important;}
+      /* EN|TE REO pill smaller on mobile */
+      #tr-pill{padding:7px 12px!important;bottom:72px!important;right:12px!important;}
+      #tr-pill span{font-size:8px!important;letter-spacing:.12em!important;}
+    }
+    @media(max-width:480px){
+      .gmc{column-count:1!important;}
+      .isp>div{height:200px!important;}
+      .hearts-wordmark{font-size:18px!important;}
+      .mm a{font-size:22px!important;}
+    }
+    
+    /* ===== BUTTON HOVER INTERACTIONS ===== */
+    a[style*="padding:17px"],a[style*="padding:18px"],a[style*="padding:15px"],a[style*="padding:16px"],
+    a[style*="letter-spacing:.18em"],a[style*="letter-spacing:.16em"],
+    button[style*="letter-spacing"],
+    .koha-btn,.btn-dk,.btn-ol{
+      transition:transform .25s cubic-bezier(.22,1,.36,1), box-shadow .25s ease, letter-spacing .25s ease, font-weight .25s ease !important;
+    }
+    a[style*="padding:17px"]:hover,a[style*="padding:18px"]:hover,a[style*="padding:15px"]:hover,a[style*="padding:16px"]:hover,
+    a[style*="letter-spacing:.18em"]:hover,a[style*="letter-spacing:.16em"]:hover,
+    .koha-btn:hover,.btn-dk:hover,.btn-ol:hover{
+      transform:scale(1.045) !important;
+      box-shadow:0 6px 24px rgba(0,0,0,.18) !important;
+      font-weight:600 !important;
+      letter-spacing:.22em !important;
+    }
+    /* Hero buttons specifically */
+    .hero-btns a{
+      transition:transform .25s cubic-bezier(.22,1,.36,1), background .2s ease, box-shadow .25s ease !important;
+    }
+    .hero-btns a:hover{
+      transform:scale(1.05) !important;
+      box-shadow:0 8px 28px rgba(0,0,0,.25) !important;
+      font-weight:600 !important;
+    }
+    /* Koha nav button */
+    .koha-btn{
+      transition:transform .25s cubic-bezier(.22,1,.36,1), background .2s ease, box-shadow .25s ease !important;
+    }
+    .koha-btn:hover{
+      transform:scale(1.06) !important;
+      box-shadow:0 4px 16px rgba(196,130,74,.4) !important;
+    }
+    /* Read More / text links */
+    .la:hover,.la{
+      transition:gap .25s ease, letter-spacing .25s ease !important;
+    }
+    .la:hover{
+      gap:18px !important;
+      letter-spacing:.22em !important;
+    }
+    
+    /* Centre nav links on desktop */
+    @media(min-width:901px){
+      .nl{position:absolute!important;left:50%!important;top:50%!important;transform:translate(-50%,-50%)!important;}
+    }
+    /* Shielded badge */
+    #shielded-logo img{transition:opacity .2s ease;}
+    #shielded-logo:hover img{opacity:.8;}
+        [data-static]{opacity:1!important;transform:none!important;transition:none!important;}
+    </style>
+<style id="perf-css">#hn-nav{transform:translateZ(0);will-change:transform}</style>
+<style id="mm-acc">.mm{justify-content:flex-start!important;gap:22px!important;padding:120px 24px 48px;overflow-y:auto;box-sizing:border-box}.mm a,.mm summary{font-size:30px!important}.mm details{display:flex;flex-direction:column;align-items:center;text-align:center}.mm summary{list-style:none;cursor:pointer;font-family:'Cormorant Garamond',serif;font-weight:400;color:#1C1C1A;display:inline-flex;align-items:center;gap:10px}.mm summary::-webkit-details-marker{display:none}.mm summary .mm-arr{font-size:14px;color:#B07845;transition:transform .2s}.mm details[open] .mm-arr{transform:rotate(180deg)}.mm .mm-sub{display:flex;flex-direction:column;align-items:center;gap:12px;padding:14px 0 6px}.mm .mm-sub a{font-family:'Manrope',sans-serif!important;font-size:13px!important;letter-spacing:.12em;text-transform:uppercase;color:#7A5A3A!important}</style>
+<style id="mobile-polish">@media(max-width:768px){[style*="font-size:9px"],[style*="font-size:10px"]{font-size:11px!important}[style*="font-size:72px"]{font-size:52px!important}.vol-grid{grid-template-columns:1fr!important}.vol-grid>div{padding:32px 26px!important}}</style>
+  </helmet>
+
+<!-- NAV -->
+<nav id="hn-nav" style="position:fixed;top:0;left:0;right:0;z-index:1000;padding:22px 56px 22px 20px;display:flex;align-items:center;justify-content:space-between;transition:all .4s ease;">
+  <a href="index.html" style="display:flex;flex-direction:row;align-items:center;gap:2px;">
+    <img src="hearts-logo-sm.png" alt="" class="hearts-logo-img" style="height:62px;width:auto;flex-shrink:0;"/>
+    <div style="display:flex;flex-direction:column;gap:2px;align-items:center;padding-right:28px;">
+      <span class="ln hearts-wordmark" style="font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:500;letter-spacing:.07em;color:white;transition:color .4s;">H.E.A.R.T.S</span>
+      <span class="ls hearts-subtitle" style="font-size:13px;margin-top:-7px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.62);transition:color .4s;margin-left:-12px;">Charitable Trust</span>
+      <span class="ls hearts-reg" style="font-size:9px;font-weight:400;letter-spacing:.1em;color:rgba(255,255,255,.4);transition:color .4s;margin-left:-12px;white-space:nowrap;">Registered Charity CC51224</span>
+    </div>
+  </a>
+  <div class="nl" style="display:flex;align-items:center;gap:32px;">
+    <div class="dd"><span class="na dd-label" style="font-size:15px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.8);cursor:pointer;display:inline-flex;align-items:center;gap:3px;transition:all .3s;">About<span class="dd-arr">▾</span></span><div class="dd-menu"><a href="mission.html">Our Mission</a><a href="about.html">About &amp; Values</a><a href="team.html">Our Team &amp; Horses</a></div></div>
+    <div class="dd"><span class="na dd-label" style="font-size:15px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.8);cursor:pointer;display:inline-flex;align-items:center;gap:3px;transition:all .3s;">Our Work<span class="dd-arr">▾</span></span><div class="dd-menu"><a href="services.html">Services</a><a href="programs.html">Programs</a><a href="get-involved.html#research">Research</a><a href="gallery.html">Gallery</a></div></div>
+    <a href="testimonials.html" class="na" style="font-size:15px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.8);transition:all .3s;">Testimonials</a>
+    <div class="dd"><a href="#contact-section" class="na dd-label" style="font-size:15px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.8);cursor:pointer;display:inline-flex;align-items:center;gap:3px;transition:all .3s;">Contact<span class="dd-arr">▾</span></a><div class="dd-menu" style="min-width:280px;"><a href="#contact-section" data-subject="Te Mauri Whakapapa o te Hōiho Wānanga">Te Mauri Whakapapa o te Hōiho Wānanga</a><a href="#contact-section" data-subject="Professional Training / Supervision">Professional Training &amp; Supervision</a><a href="#contact-section" data-subject="Workshops & Retreats">Workshops &amp; Retreats</a><a href="https://wearelovingawareness-oss.github.io/Heartsv5/get-involved.html">Volunteering</a><a href="#contact-section" data-subject="Koha / Donation">Support Us / Koha</a><a href="#contact-section" data-subject="General Enquiry">General Enquiry</a></div></div>
+  </div>
+  <div style="display:flex;align-items:center;gap:14px;"><button id="tr-nav-lang" onclick="toggleLangMenu()" style="background:none;border:1px solid rgba(255,255,255,.35);color:rgba(255,255,255,.85);font-family:'Manrope',sans-serif;font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;height:34px;padding:0 20px;line-height:1;display:inline-flex;align-items:center;justify-content:center;box-sizing:border-box;cursor:pointer;transition:all .25s;"><span id="tr-nav-lang-label">EN | Te Reo</span></button><a href="get-involved.html#koha" class="koha-btn" style="background:#C4824A;color:white;height:34px;padding:0 20px;font-size:10px;line-height:1;font-weight:600;letter-spacing:.12em;text-transform:uppercase;transition:background .2s;display:inline-flex;align-items:center;justify-content:center;box-sizing:border-box;">Koha ♥</a><button id="hn-burger" class="nb" aria-label="Menu" style="display:none;flex-direction:column;gap:6px;background:none;border:none;cursor:pointer;padding:4px;"><span class="bl" style="display:block;width:26px;height:1px;background:white;transition:all .3s;"></span><span class="bl" style="display:block;width:18px;height:1px;background:white;transition:all .3s;"></span></button></div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div id="hn-mm" class="mm">
+  <button id="hn-close" style="position:absolute;top:28px;right:32px;background:none;border:none;font-size:28px;color:#9B8B7B;cursor:pointer;line-height:1;">✕</button>
+  <a href="index.html">Welcome</a>
+  <details><summary>About<span class="mm-arr">▾</span></summary><div class="mm-sub"><a href="mission.html">Our Mission</a><a href="about.html">About &amp; Values</a><a href="team.html">Our Team &amp; Horses</a></div></details>
+  <details><summary>Our Work<span class="mm-arr">▾</span></summary><div class="mm-sub"><a href="services.html">Services</a><a href="programs.html">Programs</a><a href="get-involved.html#research">Research</a><a href="gallery.html">Gallery</a></div></details>
+  <a href="testimonials.html">Testimonials</a>
+  <details><summary>Contact<span class="mm-arr">▾</span></summary><div class="mm-sub"><a href="#contact-section">Contact Us</a><a href="#contact-section" data-subject="Te Mauri Whakapapa o te Hōiho Wānanga">Te Mauri Whakapapa o te Hōiho Wānanga</a><a href="#contact-section" data-subject="Professional Training / Supervision">Professional Training &amp; Supervision</a><a href="#contact-section" data-subject="Workshops & Retreats">Workshops &amp; Retreats</a><a href="https://wearelovingawareness-oss.github.io/Heartsv5/get-involved.html">Volunteering</a><a href="#contact-section" data-subject="Koha / Donation">Support Us / Koha</a><a href="#contact-section" data-subject="General Enquiry">General Enquiry</a></div></details>
+  <a href="get-involved.html#koha">Koha</a>
+</div>
+
+<!-- HERO SLIDESHOW -->
+<section id="hero-ss" style="position:relative;height:100vh;min-height:640px;overflow:hidden;">
+
+  <div class="ss-fade">
+  <!-- SLIDES -->
+  <div id="ss-track" style="position:absolute;inset:0;">
+    <div class="ss-slide" style="position:absolute;inset:0;opacity:1;transition:opacity 1.2s ease;">
+      <img src="slideshow/01.jpg" alt="A man connecting with a chestnut horse in an open field at H.E.A.R.T.S. Charitable Trust, Ōtaki, demonstrating equine-assisted trauma therapy." style="width:100%;height:100%;object-fit:cover;object-position:center 32%;" loading="eager"/>
+    </div>
+    <div class="ss-slide" style="position:absolute;inset:0;opacity:0;transition:opacity 1.2s ease;">
+      <img src="slideshow/02.jpg" alt="An intimate moment of emotional connection and nervous system regulation with a bay horse on the Kāpiti Coast." style="width:100%;height:100%;object-fit:cover;object-position:center 32%;"/>
+    </div>
+    <div class="ss-slide" style="position:absolute;inset:0;opacity:0;transition:opacity 1.2s ease;">
+      <img src="slideshow/03.jpg" alt="A group of participants experiencing whanaungatanga and collective healing in a medicine circle paddock environment." style="width:100%;height:100%;object-fit:cover;object-position:center 32%;"/>
+    </div>
+    <div class="ss-slide" style="position:absolute;inset:0;opacity:0;transition:opacity 1.2s ease;">
+      <img src="slideshow/04.jpg" alt="An inclusive, safe healing space demonstrating vulnerability and surrender with a resting horse at H.E.A.R.T.S. Trust." style="width:100%;height:100%;object-fit:cover;object-position:center 32%;"/>
+    </div>
+    <div class="ss-slide" style="position:absolute;inset:0;opacity:0;transition:opacity 1.2s ease;">
+      <img src="slideshow/05.jpg" alt="Bicultural Rongoā Māori illustration depicting a sacred ancestral hongi in native bush with native birds, representing whakapapa and environmental tohu." style="width:100%;height:100%;object-fit:cover;object-position:center 32%;"/>
+    </div>
+  </div>
+
+  <!-- Dark gradient for text legibility -->
+  <div class="ss-shade" style="position:absolute;inset:0;background:linear-gradient(to top,rgba(10,7,4,.72) 0%,rgba(10,7,4,.18) 50%,transparent 100%);pointer-events:none;"></div>
+  </div>
+
+  <!-- TEXT OVERLAY -->
+  <div class="hcp" style="position:absolute;bottom:0;left:0;right:0;z-index:5;padding:0 72px 28px;max-width:760px;">
+    <h1 style="font-family:'Cormorant Garamond',serif;font-size:clamp(40px,6vw,86px);font-weight:400;line-height:1.02;color:white;letter-spacing:-.015em;margin-bottom:14px;" id="tr-hero-h1" data-tr="tr-hero-h1">Restoring Right Relationship</h1>
+    <p id="tr-hero-maori" data-tr="tr-hero-maori" style="font-family:'Cormorant Garamond',serif;font-size:clamp(21px,2.4vw,33px);font-weight:300;font-style:italic;color:rgba(255,255,255,.8);margin-bottom:14px;">Kotahitanga o te Tangata me te Hōiho</p>
+    <p style="font-size:clamp(14px,1.4vw,17px);font-weight:300;color:rgba(255,255,255,.8);line-height:1.7;max-width:560px;margin-bottom:34px;text-wrap:pretty;" id="tr-hero-sub" data-tr="tr-hero-sub">The unity between people and horses that restores connection, dignity, and wellbeing.</p>
+    <div class="hero-btns" style="display:flex;gap:14px;flex-wrap:wrap;">
+      <a href="about.html" style="display:inline-flex;align-items:center;padding:15px 40px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.4);color:white;font-size:10px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;transition:all .3s;backdrop-filter:blur(8px);" id="tr-btn-learn" data-tr="tr-btn-learn">Learn More</a>
+      <a href="mission.html" style="display:inline-flex;align-items:center;padding:15px 40px;background:#C4824A;border:1px solid #C4824A;color:white;font-size:10px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;transition:all .3s;" id="tr-btn-support" data-tr="tr-btn-support">Support Our Mission</a>
+    </div>
+  </div>
+
+
+
+  <!-- Progress bar -->
+  <div id="ss-progress" style="position:absolute;bottom:0;left:0;height:2px;background:rgba(255,255,255,.45);width:0%;z-index:10;transition:width linear;"></div>
+
+</section>
+
+<!-- WHO / WHO / WHAT -->
+<section class="sp pillars-sec" style="background:#FDFAF6;padding:120px 0 100px;">
+  <div class="cw" style="max-width:1200px;margin:0 auto;padding:0 56px;">
+    <div class="hero-btns hero-btns-m" style="display:none;margin-bottom:32px;gap:14px;flex-wrap:wrap;">
+      <a href="about.html" style="display:inline-flex;align-items:center;padding:15px 40px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.4);color:white;font-size:10px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;transition:all .3s;backdrop-filter:blur(8px);" data-tr="tr-btn-learn">Learn More</a>
+      <a href="mission.html" style="display:inline-flex;align-items:center;padding:15px 40px;background:#C4824A;border:1px solid #C4824A;color:white;font-size:10px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;transition:all .3s;" data-tr="tr-btn-support">Support Our Mission</a>
+    </div>
+    <div class="tc" style="display:flex;gap:3px;">
+      <div data-reveal style="flex:1;padding:52px 44px;background:white;border:1px solid #EDE4D8;">
+        <p style="font-size:9px;font-weight:500;letter-spacing:.25em;text-transform:uppercase;color:#C8B9A8;margin-bottom:22px;">01</p>
+        <h3 style="font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:400;color:#1C1C1A;margin-bottom:20px;" id="tr-www-1-h" data-tr="tr-www-1-h">Who We Are</h3>
+        <p style="font-size:14px;line-height:1.85;color:#5A524A;font-weight:300;text-wrap:pretty;" id="tr-www-1-p" data-tr="tr-www-1-p">A charitable trust grounded in the belief that healing is relational, embodied, and culturally rooted.</p>
+      </div>
+      <div data-reveal data-d="1" style="flex:1;padding:52px 44px;background:white;border:1px solid #EDE4D8;">
+        <p style="font-size:9px;font-weight:500;letter-spacing:.25em;text-transform:uppercase;color:#C8B9A8;margin-bottom:22px;">02</p>
+        <h3 style="font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:400;color:#1C1C1A;margin-bottom:20px;" id="tr-www-2-h" data-tr="tr-www-2-h">Who We Serve</h3>
+        <p style="font-size:14px;line-height:1.85;color:#5A524A;font-weight:300;text-wrap:pretty;" id="tr-www-2-p" data-tr="tr-www-2-p">We are dedicated to supporting rangatahi Māori, all youth, survivors of sexual abuse, and those navigating suicidal ideation.</p>
+      </div>
+      <div data-reveal data-d="2" style="flex:1;padding:52px 44px;background:white;border:1px solid #EDE4D8;">
+        <p style="font-size:9px;font-weight:500;letter-spacing:.25em;text-transform:uppercase;color:#C8B9A8;margin-bottom:22px;">03</p>
+        <h3 style="font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:400;color:#1C1C1A;margin-bottom:20px;" id="tr-www-3-h" data-tr="tr-www-3-h">What We Do</h3>
+        <p style="font-size:14px;line-height:1.85;color:#5A524A;font-weight:300;text-wrap:pretty;" id="tr-www-3-p" data-tr="tr-www-3-p">We offer relational horse–human experiences that support reconnection with self, whānau, whakapapa, and whenua — restoring belonging, resilience, and kotahitanga.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MŌ MĀTOU -->
+<section class="sp momatou-sec" style="background:#FDFAF6;padding:0 0 120px;">
+  <div class="cw" style="max-width:1000px;margin:0 auto;padding:0 56px;">
+    <div data-reveal style="display:flex;flex-direction:column;align-items:center;text-align:center;margin-bottom:44px;">
+      <p style="font-size:11px;font-weight:500;letter-spacing:.24em;text-transform:uppercase;color:#B07845;margin-bottom:22px;" id="tr-mm-label" data-tr="tr-mm-label">Mō Mātou</p>
+      <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(38px,5.6vw,68px);font-weight:300;color:#1A5C77;line-height:1.08;letter-spacing:-.02em;margin:0;" id="tr-mm-h2" data-tr="tr-mm-h2">Coming back to the Heart</h2>
+      <span aria-hidden="true" style="display:block;width:64px;height:1px;background:linear-gradient(90deg,transparent,#B07845,transparent);margin-top:34px;"></span>
+    </div>
+    <div data-reveal data-d="1" style="display:flex;flex-direction:column;align-items:center;">
+      <p style="font-family:'Cormorant Garamond',serif;font-size:clamp(22px,2.6vw,31px);font-weight:300;font-style:italic;color:#1A5C77;line-height:1.5;text-align:center;max-width:760px;margin:0 0 56px;text-wrap:pretty;" id="tr-mm-p1" data-tr="tr-mm-p1">H.E.A.R.T.S. Charitable Trust was born from a deep conviction that healing is not simply a clinical procedure — it is a living, relational, and culturally grounded experience.</p>
+      <div class="mm-cols" style="display:flex;flex-direction:column;gap:26px;max-width:800px;text-align:center;">
+        <p style="font-size:18px;line-height:1.85;color:#4E463E;font-weight:300;margin:0;text-wrap:balance;" id="tr-mm-p2" data-tr="tr-mm-p2">We exist for those who need to be met exactly where they are: with dignity, warmth, and an understanding that their story — and the stories carried through their whakapapa — matter.</p>
+        <p style="font-size:18px;line-height:1.85;color:#4E463E;font-weight:300;margin:0;text-wrap:pretty;" id="tr-mm-p3" data-tr="tr-mm-p3">Through relational horse–human experiences, we create space for tangata and whānau to reconnect with themselves, each other, their whakapapa, and whenua. In these moments of kotahitanga — unity between people and horses — individuals rediscover connection, belonging, and resilience that can support lasting change.</p>
+      </div>
+    </div>
+  </div>
+  <style>@media(max-width:760px){.mm-cols{gap:20px !important;}.mm-cols p{font-size:16px !important;}}</style>
+</section>
+
+<!-- VISION STATEMENT -->
+<section style="position:relative;padding:130px 0;overflow:hidden;background:#12283A;">
+  <img src="paua-landscape.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;"/>
+  <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(8,20,30,.3) 0%,rgba(6,26,34,.36) 100%);"></div>
+  <div class="cw" style="position:relative;z-index:2;max-width:1000px;margin:0 auto;padding:0 56px;text-align:center;">
+    <div data-reveal>
+      <p style="font-size:10px;font-weight:500;letter-spacing:.28em;text-transform:uppercase;color:#FBEBD6;margin-bottom:20px;text-shadow:0 1px 16px rgba(0,0,0,.75);" id="tr-vis-label" data-tr="tr-vis-label">Tō Mātou Moemoeā</p>
+      <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(28px,3.4vw,44px);font-weight:300;color:white;letter-spacing:-.01em;margin-bottom:46px;text-shadow:0 2px 24px rgba(0,0,0,.8);" id="tr-vis-h2" data-tr="tr-vis-h2">The Vision Statement</h2>
+      <div style="width:40px;height:1px;background:rgba(255,255,255,.55);margin:0 auto 46px;"></div>
+      <p style="font-family:'Cormorant Garamond',serif;font-size:clamp(22px,2.9vw,38px);font-weight:300;font-style:italic;color:#fff;line-height:1.55;text-wrap:pretty;text-shadow:0 2px 30px rgba(0,0,0,.85),0 1px 4px rgba(0,0,0,.5);" id="tr-vis-p" data-tr="tr-vis-p">An Aotearoa where the mauri of the horse reweaves the broken threads of trauma, restoring tangata and whānau to a tapestry of sacred connection, dignity, and Te Tiriti-grounded belonging.</p>
+    </div>
+  </div>
+</section>
+
+<!-- MISSION STATEMENT -->
+<section style="background:#F0EBE3;padding:130px 0;">
+  <div class="cw" style="max-width:1000px;margin:0 auto;padding:0 56px;text-align:center;">
+    <div data-reveal>
+      <p style="font-size:10px;font-weight:500;letter-spacing:.28em;text-transform:uppercase;color:#B07845;margin-bottom:20px;" id="tr-mis-label" data-tr="tr-mis-label">Tō Mātou Whakatakinga</p>
+      <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(28px,3.4vw,44px);font-weight:300;color:#1C1C1A;letter-spacing:-.01em;margin-bottom:46px;" id="tr-mis-h2" data-tr="tr-mis-h2">The Mission Statement</h2>
+      <div style="width:40px;height:1px;background:rgba(0,0,0,.16);margin:0 auto 46px;"></div>
+      <p style="font-family:'Cormorant Garamond',serif;font-size:clamp(22px,2.9vw,38px);font-weight:300;font-style:italic;color:#3A3530;line-height:1.55;text-wrap:pretty;" id="tr-mis-p" data-tr="tr-mis-p">To walk alongside tangata and whānau through relational horse–human experiences that support healing from trauma and restore right relationship with self, whakapapa, and whenua — nurturing lifelong resilience and honouring Te Tiriti o Waitangi.</p>
+    </div>
+  </div>
+</section>
+
+<!-- KAUPAPA (was INTRO) -->
+<section class="sp" style="background:#FDFAF6;padding:120px 0;">
+  <div class="cw" style="max-width:1200px;margin:0 auto;padding:0 56px;">
+    <div class="tc" style="display:flex;gap:80px;align-items:center;">
+      <div data-reveal style="flex:0 0 46%;position:relative;">
+        <div class="ib" style="position:relative;overflow:hidden;">
+          <img src="https://images.squarespace-cdn.com/content/v1/623820c2d1350755a59b6d22/6108d69f-be70-45ef-afd1-462352dec2f9/Abby+Indi.jpg" alt="Connection between person and horse" style="width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center;"/>
+          <!-- Gradient + text overlay -->
+          <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.58) 0%,transparent 55%);"></div>
+          <p style="position:absolute;bottom:28px;left:0;right:0;padding:0 28px;font-family:'Cormorant Garamond',serif;font-size:clamp(22px,3vw,34px);font-weight:400;font-style:italic;color:white;line-height:1.4;text-shadow:0 2px 20px rgba(0,0,0,.4);" id="tr-img-caption" data-tr="tr-img-caption">A living, relational<br>practice.</p>
+        </div>
+      </div>
+      <div data-reveal data-d="1" style="flex:1;min-width:0;padding-top:24px;">
+        <p style="font-size:11px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:#B07845;margin-bottom:20px;" id="tr-intro-label" data-tr="tr-intro-label">Our Kaupapa</p>
+        <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(30px,3.8vw,50px);font-weight:400;color:#1C1C1A;line-height:1.18;letter-spacing:-.01em;margin-bottom:32px;" id="tr-intro-h2" data-tr="tr-intro-h2">Healing where body,<br>spirit, and land meet.</h2>
+        <p style="font-size:15px;line-height:1.88;color:#5A524A;font-weight:300;margin-bottom:18px;" id="tr-intro-p1" data-tr="tr-intro-p1">We are committed to walking alongside those who need it most, through culturally grounded, holistic care. Rooted in tikanga Māori, our work addresses intergenerational trauma by fostering kotahitanga (unity), strengthening whanaungatanga (connection), and honouring whakapapa (genealogy).</p>
+        <p style="font-size:15px;line-height:1.88;color:#5A524A;font-weight:300;margin-bottom:40px;" id="tr-intro-p2" data-tr="tr-intro-p2">Through equine-supported therapy, systemic family constellation work, and collaboration with clinical professionals, we take a whole-person approach — mind, body, and spirit. Guided by the principles of waiora, we create safe, inclusive spaces for healing, empowering individuals to reconnect with themselves, their communities, and the possibility of a more life-affirming future.</p>
+        <a href="about.html" class="la" style="display:inline-flex;align-items:center;gap:12px;font-size:10px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:#B07845;transition:all .3s;" id="tr-approach-link" data-tr="tr-approach-link">Our Approach →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRACTICE (split) -->
+<section style="background:#FDFAF6;">
+  <div class="tc" style="display:flex;align-items:stretch;">
+    <div data-reveal class="cw" style="flex:1;padding:100px 80px 100px 72px;background:#F0EBE3;display:flex;flex-direction:column;justify-content:center;">
+      <p style="font-size:11px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:#B07845;margin-bottom:20px;" id="tr-practice-label" data-tr="tr-practice-label">Our Practice</p>
+      <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(28px,3.5vw,46px);font-weight:400;color:#1C1C1A;line-height:1.2;letter-spacing:-.01em;margin-bottom:32px;" id="tr-practice-h2" data-tr="tr-practice-h2">The medicine circle —<br>where the unseen<br>becomes visible.</h2>
+      <p style="font-size:15px;line-height:1.88;color:#5A524A;font-weight:300;margin-bottom:18px;" id="tr-practice-p1" data-tr="tr-practice-p1">We work alongside ngā hōiho within a medicine circle — a sacred relational space where what is unseen can be safely revealed. Each horse holds a unique therapeutic presence, representing aspects of connection, truth, strength, vulnerability, and love.</p>
+      <p style="font-size:15px;line-height:1.88;color:#5A524A;font-weight:300;margin-bottom:18px;" id="tr-practice-p2" data-tr="tr-practice-p2">Without words needing to be spoken, the horses respond to the emotional and relational field of the person present. Where they stand within the circle reflects what is happening beneath the surface — the places of longing, disconnection, or unresolved experience.</p>
+      <p id="tr-practice-p3" data-tr="tr-practice-p3" style="font-size:15px;line-height:1.88;color:#5A524A;font-weight:300;margin-bottom:28px;">Through this process, we are able to gently and directly access the core relational wounds that may sit within a person — often shaped by lived experience, and at times carried across generations.</p>
+      <ul style="list-style:none;display:flex;flex-direction:column;gap:16px;">
+        <li style="display:flex;align-items:flex-start;gap:16px;font-size:14px;color:#5A524A;line-height:1.65;font-weight:300;"><span style="flex-shrink:0;width:22px;height:1px;background:#B07845;margin-top:11px;"></span><span id="tr-bullet-1" data-tr="tr-bullet-1">Nervous system regulation — feeling safe in the body</span></li>
+        <li style="display:flex;align-items:flex-start;gap:16px;font-size:14px;color:#5A524A;line-height:1.65;font-weight:300;"><span style="flex-shrink:0;width:22px;height:1px;background:#B07845;margin-top:11px;"></span><span id="tr-bullet-2" data-tr="tr-bullet-2">Relational repair — experiencing trust, attunement, and connection</span></li>
+        <li style="display:flex;align-items:flex-start;gap:16px;font-size:14px;color:#5A524A;line-height:1.65;font-weight:300;"><span style="flex-shrink:0;width:22px;height:1px;background:#B07845;margin-top:11px;"></span><span id="tr-bullet-3" data-tr="tr-bullet-3">Ancestral awareness — recognising patterns carried through whakapapa</span></li>
+        <li style="display:flex;align-items:flex-start;gap:16px;font-size:14px;color:#5A524A;line-height:1.65;font-weight:300;"><span style="flex-shrink:0;width:22px;height:1px;background:#B07845;margin-top:11px;"></span><span id="tr-bullet-4" data-tr="tr-bullet-4">Return to self — reconnecting with inherent strength and light</span></li>
+      </ul>
+    </div>
+    <div style="flex:1;position:relative;min-height:560px;overflow:hidden;">
+      <img src="https://images.squarespace-cdn.com/content/v1/623820c2d1350755a59b6d22/1658537633222-G5KL4TRJW7ZAJ76O46ED/Lisa+%26+Frank.jpg" alt="Person with horse" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 20%;"/>
+    </div>
+  </div>
+</section>
+
+<!-- PULL QUOTE -->
+<section style="position:relative;padding:140px 0;overflow:hidden;">
+  <img src="quote-horse.jpeg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%;"/>
+  <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(20,26,20,.1) 0%,rgba(14,22,16,.06) 100%);"></div>
+  <div style="position:relative;z-index:2;max-width:860px;margin:0 auto;padding:0 56px;text-align:center;">
+    <div style="position:absolute;inset:0;pointer-events:none;"></div>
+    <span style="position:relative;font-family:'Cormorant Garamond',serif;font-size:80px;line-height:.55;color:rgba(255,255,255,.2);display:block;margin-bottom:32px;">"</span>
+    <p id="tr-quote" data-tr="tr-quote" style="position:relative;font-family:'Cormorant Garamond',serif;font-size:clamp(23px,3.1vw,38px);font-weight:500;font-style:italic;color:#fff;line-height:1.6;margin-bottom:40px;text-shadow:0 2px 8px rgba(0,0,0,.6),0 4px 34px rgba(0,0,0,.55);">“Healing is not something done to a person — it emerges through relationship. In kotahitanga with ngā hōiho, the path of healing, self-discovery, and transformation are revealed.”</p>
+    <div style="position:relative;width:40px;height:1px;background:rgba(255,255,255,.45);margin:0 auto 20px;"></div>
+    <p style="position:relative;font-size:10px;font-weight:600;letter-spacing:.25em;text-transform:uppercase;color:#fff;text-shadow:0 1px 6px rgba(0,0,0,.6),0 2px 18px rgba(0,0,0,.5);">H.E.A.R.T.S. Charitable Trust</p>
+  </div>
+</section>
+
+<!-- VALUES -->
+<section class="sp" style="background:#F7F3EE;padding:120px 0;">
+  <div class="cw" style="max-width:1200px;margin:0 auto;padding:0 56px;">
+    <div data-reveal style="text-align:center;margin-bottom:72px;">
+      <p style="font-size:11px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:#B07845;margin-bottom:18px;" id="tr-values-label" data-tr="tr-values-label" data-tr="tr-values-label">Our Values</p>
+      <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(30px,4vw,52px);font-weight:400;color:#1C1C1A;letter-spacing:-.01em;" id="tr-values-h2" data-tr="tr-values-h2">Guided by what endures.</h2>
+    </div>
+    <div class="tc" style="display:flex;gap:3px;">
+      <div data-reveal style="flex:1;padding:52px 44px;background:white;border:1px solid #EDE4D8;">
+        <p style="font-size:9px;letter-spacing:.25em;text-transform:uppercase;color:#C8B9A8;margin-bottom:24px;">01</p>
+        <h3 style="font-family:'Cormorant Garamond',serif;font-size:34px;font-weight:400;color:#C4824A;margin-bottom:8px;" id="tr-val-1-h" data-tr="tr-val-1-h">Kotahitanga</h3>
+        <p style="font-size:10px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:#9B8B7B;margin-bottom:24px;" id="tr-val-1-sub" data-tr="tr-val-1-sub">Unity &amp; Collective Connection</p>
+        <p style="font-size:14px;line-height:1.82;color:#5A524A;font-weight:300;" id="tr-val-1-p" data-tr="tr-val-1-p">Healing through shared belonging. We hold space for individuals and communities to reconnect — with themselves, with each other, and with the whenua.</p>
+      </div>
+      <div data-reveal data-d="1" style="flex:1;padding:52px 44px;background:white;border:1px solid #EDE4D8;">
+        <p style="font-size:9px;letter-spacing:.25em;text-transform:uppercase;color:#C8B9A8;margin-bottom:24px;">02</p>
+        <h3 style="font-family:'Cormorant Garamond',serif;font-size:34px;font-weight:400;color:#C4824A;margin-bottom:8px;" id="tr-val-2-h" data-tr="tr-val-2-h">Whanaungatanga</h3>
+        <p style="font-size:10px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:#9B8B7B;margin-bottom:24px;" id="tr-val-2-sub" data-tr="tr-val-2-sub">Relationships &amp; Belonging</p>
+        <p style="font-size:14px;line-height:1.82;color:#5A524A;font-weight:300;" id="tr-val-2-p" data-tr="tr-val-2-p">Our work centres the relationships that make us whole — human, horse, and the living relational systems that shape us across generations.</p>
+      </div>
+      <div data-reveal data-d="2" style="flex:1;padding:52px 44px;background:white;border:1px solid #EDE4D8;">
+        <p style="font-size:9px;letter-spacing:.25em;text-transform:uppercase;color:#C8B9A8;margin-bottom:24px;">03</p>
+        <h3 style="font-family:'Cormorant Garamond',serif;font-size:34px;font-weight:400;color:#C4824A;margin-bottom:8px;" id="tr-val-3-h" data-tr="tr-val-3-h">Manaakitanga</h3>
+        <p style="font-size:10px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:#9B8B7B;margin-bottom:24px;" id="tr-val-3-sub" data-tr="tr-val-3-sub">Care, Respect &amp; Reciprocity</p>
+        <p style="font-size:14px;line-height:1.82;color:#5A524A;font-weight:300;" id="tr-val-3-p" data-tr="tr-val-3-p">Every person who enters this space is received with dignity, warmth, and respect. Care is not conditional — it is the ground from which everything grows.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VIDEO -->
+<section style="background:#FDFAF6;padding:120px 0;">
+  <div class="cw" style="max-width:1100px;margin:0 auto;padding:0 56px;">
+    <div data-reveal style="text-align:center;margin-bottom:52px;">
+      <p style="font-size:11px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:#B07845;margin-bottom:18px;" id="tr-story-label" data-tr="tr-story-label">Our Story</p>
+      <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(30px,4vw,52px);font-weight:400;color:#1C1C1A;letter-spacing:-.01em;margin-bottom:20px;" id="tr-story-h2" data-tr="tr-story-h2">Witness the Connection</h2>
+      <p style="font-family:'Cormorant Garamond',serif;font-size:19px;font-style:italic;color:#9B8B7B;max-width:520px;margin:0 auto;line-height:1.6;" id="tr-video-desc" data-tr="tr-video-desc">See how relationship with the horse can open space for healing, awareness, and transformation.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr;gap:16px;">
+      <!-- Video 1 -->
+      <div data-reveal data-d="1" id="yt-v1" style="position:relative;width:100%;padding-bottom:56.25%;overflow:hidden;box-shadow:0 24px 80px rgba(0,0,0,.12);cursor:pointer;" onmouseover="var p=this.querySelector('.vplay');if(p)p.style.transform='translate(-50%,-50%) scale(1.08)';var i=this.querySelector('img');if(i)i.style.transform='scale(1.04)'" onmouseout="var p=this.querySelector('.vplay');if(p)p.style.transform='translate(-50%,-50%) scale(1)';var i=this.querySelector('img');if(i)i.style.transform='scale(1)'">
+        <img src="https://img.youtube.com/vi/i_tKP0wriWs/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://img.youtube.com/vi/i_tKP0wriWs/hqdefault.jpg'" alt="Play video" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1s ease;"/>
+        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.5) 0%,rgba(0,0,0,.1) 60%,transparent 100%);"></div>
+        <div class="vplay" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:64px;height:64px;background:rgba(255,255,255,.92);border-radius:50%;display:flex;align-items:center;justify-content:center;transition:transform .35s cubic-bezier(.22,1,.36,1);box-shadow:0 8px 40px rgba(0,0,0,.25);">
+          <div style="width:0;height:0;border-top:13px solid transparent;border-bottom:13px solid transparent;border-left:21px solid #C4824A;margin-left:4px;"></div>
+        </div>
+      </div>
+      <!-- Video 2 -->
+      <div data-reveal data-d="2" id="yt-v2" style="position:relative;width:100%;padding-bottom:56.25%;overflow:hidden;box-shadow:0 24px 80px rgba(0,0,0,.12);cursor:pointer;" onmouseover="var p=this.querySelector('.vplay');if(p)p.style.transform='translate(-50%,-50%) scale(1.08)';var i=this.querySelector('img');if(i)i.style.transform='scale(1.04)'" onmouseout="var p=this.querySelector('.vplay');if(p)p.style.transform='translate(-50%,-50%) scale(1)';var i=this.querySelector('img');if(i)i.style.transform='scale(1)'">
+        <img src="https://img.youtube.com/vi/0aB2zoeTDRE/hqdefault.jpg" onerror="this.onerror=null;this.src='https://img.youtube.com/vi/0aB2zoeTDRE/0.jpg'" alt="Play video" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1s ease;"/>
+        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.5) 0%,rgba(0,0,0,.1) 60%,transparent 100%);"></div>
+        <div class="vplay" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:64px;height:64px;background:rgba(255,255,255,.92);border-radius:50%;display:flex;align-items:center;justify-content:center;transition:transform .35s cubic-bezier(.22,1,.36,1);box-shadow:0 8px 40px rgba(0,0,0,.25);">
+          <div style="width:0;height:0;border-top:13px solid transparent;border-bottom:13px solid transparent;border-left:21px solid #C4824A;margin-left:4px;"></div>
+        </div>
+      </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY CTA -->
+<section style="background:#F7F3EE;padding:72px 0 64px;text-align:center;">
+  <p style="font-size:9px;font-weight:500;letter-spacing:.28em;text-transform:uppercase;color:#B07845;margin-bottom:20px;">Ten Years of Connection</p>
+  <h3 style="font-family:'Cormorant Garamond',serif;font-size:clamp(24px,3vw,38px);font-weight:300;color:#1C1C1A;letter-spacing:-.01em;margin-bottom:32px;">Glimpses from our Herd &amp; Whenua</h3>
+  <a href="gallery.html" style="display:inline-flex;align-items:center;gap:14px;font-size:10px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:#1C1C1A;border:1px solid rgba(0,0,0,.2);padding:16px 44px;transition:all .25s;" onmouseover="this.style.background='#1C1C1A';this.style.color='white'" onmouseout="this.style.background='transparent';this.style.color='#1C1C1A'">View Gallery <span style="font-size:15px;">→</span></a>
+</section>
+
+<!-- IMAGE STRIP -->
+<div class="isp" style="display:flex;height:380px;gap:2px;">
+  <div class="ib" style="flex:1;position:relative;"><img src="https://images.squarespace-cdn.com/content/v1/623820c2d1350755a59b6d22/1710635488960-WQZCOVKKVHZ3LW148C4U/Best+of+Tubby+%26+Keegan.JPG" alt="" style="width:100%;height:100%;object-fit:cover;"/></div>
+  <div class="ib" style="flex:1;position:relative;"><img src="https://images.squarespace-cdn.com/content/v1/623820c2d1350755a59b6d22/1696985813441-JI5NNMI908Q8WU9QDTIG/Group+1.jpg" alt="" style="width:100%;height:100%;object-fit:cover;"/></div>
+  <div class="ib" style="flex:1;position:relative;"><img src="https://images.squarespace-cdn.com/content/v1/623820c2d1350755a59b6d22/1778716441063-3OW5KB3PK8JV4RBAPXQ8/20200519_134040.jpg" alt="" style="width:100%;height:100%;object-fit:cover;"/></div>
+  <div class="ib" style="flex:1;position:relative;"><img src="https://images.squarespace-cdn.com/content/v1/623820c2d1350755a59b6d22/1657613563028-GS2ACFU9XJ65NOGF27AH/2108+Boy+%26+Olli.jpg" alt="" style="width:100%;height:100%;object-fit:cover;"/></div>
+</div>
+
+<!-- TESTIMONIALS STRIP -->
+<section style="background:#FDFAF6;padding:120px 0;">
+  <div class="cw" style="max-width:1200px;margin:0 auto;padding:0 56px;">
+    <div data-reveal style="text-align:center;margin-bottom:72px;">
+      <p style="font-size:11px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:#B07845;margin-bottom:18px;" id="tr-test-label" data-tr="tr-test-label">Ngā Kupu Tautoko</p>
+      <h2 id="tr-test-h2" data-tr="tr-test-h2" style="font-family:'Cormorant Garamond',serif;font-size:clamp(30px,4vw,50px);font-weight:400;color:#1C1C1A;letter-spacing:-.01em;margin-bottom:20px;">Words of Support</h2>
+      <p style="font-family:'Cormorant Garamond',serif;font-size:19px;font-style:italic;color:#9B8B7B;max-width:720px;margin:0 auto;line-height:1.6;text-wrap:pretty;" id="tr-voices-desc" data-tr="tr-voices-desc">Every journey is unique. Here, we share a glimpse of the experiences, insights, and shifts that people have carried with them after spending time with our herd.<br><br>Through connection with the horses, many discover new perspectives, a deeper understanding of themselves, and possibilities they may not have seen before.<br><br>These are their words, their reflections, and their experiences – shared in the hope that they may offer insight, encouragement, and a sense of what becomes possible when we reconnect with ourselves and the relationships that shape our lives.</p>
+    </div>
+    <div class="tc" style="display:flex;gap:3px;">
+      <div data-reveal style="flex:1;background:white;padding:52px 44px;border:1px solid #EDE4D8;display:flex;flex-direction:column;">
+        <span style="font-family:'Cormorant Garamond',serif;font-size:64px;line-height:.6;color:#EDE4D8;margin-bottom:20px;">"</span>
+        <p style="font-family:'Cormorant Garamond',serif;font-size:19px;font-style:italic;color:#3A3530;line-height:1.72;font-weight:400;flex:1;margin-bottom:28px;" id="tr-test-q1" data-tr="tr-test-q1">They do this in a calm and gentle way, giving the clients an experience of their inner world without imposing their own views or issues upon them.</p>
+        <div style="width:28px;height:1px;background:#C4824A;margin-bottom:14px;"></div>
+        <p style="font-size:10px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:#9B8B7B;" id="tr-test-a1" data-tr="tr-test-a1">Child Psychiatrist (Norway) · Visiting Practitioner to the H.E.A.R.T.S. Medicine Circle, Aotearoa</p>
+      </div>
+      <div data-reveal data-d="1" style="flex:1;background:#F0EBE3;padding:52px 44px;border:1px solid #EDE4D8;display:flex;flex-direction:column;">
+        <span style="font-family:'Cormorant Garamond',serif;font-size:64px;line-height:.6;color:#D9CFC3;margin-bottom:20px;">"</span>
+        <p style="font-family:'Cormorant Garamond',serif;font-size:19px;font-style:italic;color:#3A3530;line-height:1.72;font-weight:400;flex:1;margin-bottom:28px;" id="tr-test-q2" data-tr="tr-test-q2">What Jenny and her team provide in the healing field is phenomenal. They provide a space of no judgement, so one is able to unearth whatever is ready to be released and healed in that moment.</p>
+        <div style="width:28px;height:1px;background:#C4824A;margin-bottom:14px;"></div>
+        <p style="font-size:10px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:#9B8B7B;" id="tr-test-a2" data-tr="tr-test-a2">Workshop Participant</p>
+      </div>
+      <div data-reveal data-d="2" style="flex:1;background:white;padding:52px 44px;border:1px solid #EDE4D8;display:flex;flex-direction:column;">
+        <span style="font-family:'Cormorant Garamond',serif;font-size:64px;line-height:.6;color:#EDE4D8;margin-bottom:20px;">"</span>
+        <p id="tr-test-q3" data-tr="tr-test-q3" style="font-family:'Cormorant Garamond',serif;font-size:22px;font-style:italic;color:#3A3530;line-height:1.6;font-weight:400;flex:1;margin-bottom:28px;">I was able to cry.<br>I was able to let go.<br>I was able to heal.</p>
+        <div style="width:28px;height:1px;background:#C4824A;margin-bottom:14px;"></div>
+        <p style="font-size:10px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:#9B8B7B;" id="tr-test-a3" data-tr="tr-test-a3">Social Worker (The Netherlands) · International Wānanga Participant, Ōtaki</p>
+      </div>
+    </div>
+    <div data-reveal style="text-align:center;margin-top:52px;">
+      <a href="testimonials.html" style="display:inline-flex;align-items:center;gap:10px;font-size:10px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:#B07845;transition:all .3s;" id="tr-test-link" data-tr="tr-test-link">Read More Stories →</a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="sp" style="background:#EDE4D8;padding:120px 0;text-align:center;">
+  <div class="cw" style="max-width:660px;margin:0 auto;padding:0 56px;">
+    <div data-reveal>
+      <p style="font-size:11px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:#9B8B7B;margin-bottom:20px;" id="tr-cta-label" data-tr="tr-cta-label">Connect With Us</p>
+      <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(34px,5vw,64px);font-weight:400;color:#1C1C1A;line-height:1.1;letter-spacing:-.01em;margin-bottom:14px;" id="tr-cta-h2" data-tr="tr-cta-h2">Let's Work Together</h2>
+      <p style="font-family:'Cormorant Garamond',serif;font-size:20px;font-style:italic;color:#9B8B7B;margin-bottom:36px;" id="tr-cta-sub" data-tr="tr-cta-sub">Kia mahi tahi tātou</p>
+      <p style="font-size:15px;line-height:1.82;color:#5A524A;font-weight:300;margin-bottom:48px;" id="tr-cta-p" data-tr="tr-cta-p">Whether you're seeking healing, referring someone, or looking to collaborate — we would love to hear from you.</p>
+      <a href="#contact-section" class="btn-dk" style="display:inline-flex;align-items:center;padding:18px 56px;background:#C4824A;color:white;font-size:10px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;transition:background .3s;" id="tr-cta-btn" data-tr="tr-cta-btn">Begin the Conversation</a>
+    </div>
+  </div>
+</section>
+
+<!-- KOHA -->
+<section style="background:#F7F3EE;padding:80px 0;text-align:center;">
+  <div class="cw" style="max-width:620px;margin:0 auto;padding:0 56px;">
+    <div data-reveal>
+      <p style="font-size:11px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:#B07845;margin-bottom:16px;">Tautoko Mai · Support Our Trust</p>
+      <p style="font-size:15px;line-height:1.82;color:#5A524A;font-weight:300;margin-bottom:32px;text-wrap:pretty;">As a registered charity, every koha helps keep the herd, the whenua, and this mahi available to those who need it.</p>
+      <a href="get-involved.html#koha" onmouseover="this.style.background='#A36035'" onmouseout="this.style.background='#C4824A'" style="display:inline-flex;align-items:center;justify-content:center;padding:16px 48px;background:#C4824A;color:white;font-size:10px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;transition:background .2s;">Give a Koha ♥</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact-section" style="background:#FDFAF6;padding:120px 0;">
+  <div class="cw" style="max-width:1100px;margin:0 auto;padding:0 56px;">
+    <div class="tc" style="display:flex;gap:80px;align-items:flex-start;">
+      <div data-reveal style="flex:1;">
+        <div style="display:inline-flex;flex-direction:column;align-items:center;margin-bottom:24px;">
+        <p style="font-size:16px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:#B07845;margin-bottom:16px;text-align:center;">Whakapā mai</p>
+        <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(32px,5vw,56px);font-weight:300;color:#1C1C1A;line-height:1.1;letter-spacing:-.01em;" id="tr-contact-h2" data-tr="tr-contact-h2">Get in Touch</h2>
+        </div>
+        <p style="font-size:15px;line-height:1.88;color:#5A524A;font-weight:300;margin-bottom:18px;">As a registered charitable trust (CC51224), H.E.A.R.T.S. is dedicated to making culturally grounded equine therapy accessible to rangatahi, whānau and individuals across the Kāpiti Coast.</p>
+        <p style="font-size:15px;line-height:1.88;color:#5A524A;font-weight:300;margin-bottom:18px;">We also welcome tangata from throughout Aotearoa.</p>
+        <p style="font-size:15px;line-height:1.88;color:#5A524A;font-weight:300;margin-bottom:40px;" id="tr-contact-p" data-tr="tr-contact-p">Whether you are seeking support for yourself or your whānau, making a clinical referral, interested in our upcoming workshops, or looking to support our mahi through a koha, we warmly welcome you to connect with us.</p>
+        <div style="display:flex;flex-direction:column;gap:20px;">
+          <div style="display:flex;align-items:center;gap:16px;">
+            <div style="width:40px;height:40px;border:1px solid #EDE4D8;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <span style="font-size:16px;">✉</span>
+            </div>
+            <div>
+              <p style="font-size:10px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:#9B8B7B;margin-bottom:3px;">Email</p>
+              <a href="mailto:kiaora@hearts.org.nz" style="font-size:15px;color:#1C1C1A;font-weight:400;">kiaora@hearts.org.nz</a>
+            </div>
+          </div>
+          <div style="display:flex;align-items:center;gap:16px;">
+            <div style="width:40px;height:40px;border:1px solid #EDE4D8;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <span style="font-size:16px;">📞</span>
+            </div>
+            <div>
+              <p style="font-size:10px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:#9B8B7B;margin-bottom:3px;">Phone</p>
+              <a href="tel:+64275366911" style="font-size:15px;color:#1C1C1A;font-weight:400;">027 536 6911</a>
+            </div>
+          </div>
+          <div style="display:flex;align-items:center;gap:16px;">
+            <div style="width:40px;height:40px;border:1px solid #EDE4D8;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <span style="font-size:16px;">📍</span>
+            </div>
+            <div>
+              <p style="font-size:10px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:#9B8B7B;margin-bottom:3px;">Location</p>
+              <p style="font-size:15px;color:#1C1C1A;font-weight:400;">242 Taylors Road, Ōtaki, Kāpiti Coast</p>
+            </div>
+          </div>
+          <div style="display:flex;align-items:center;gap:16px;">
+            <div style="width:40px;height:40px;border:1px solid #EDE4D8;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <span style="font-size:16px;">📅</span>
+            </div>
+            <div>
+              <p style="font-size:10px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:#9B8B7B;margin-bottom:3px;">Hours</p>
+              <p style="font-size:15px;color:#1C1C1A;font-weight:400;">By appointment only</p>
+            </div>
+          </div>
+          <div style="display:flex;align-items:center;gap:16px;">
+            <div style="width:40px;height:40px;border:1px solid #EDE4D8;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <span style="font-size:16px;">♡</span>
+            </div>
+            <div>
+              <p style="font-size:10px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:#9B8B7B;margin-bottom:3px;">Registered Charity</p>
+              <p style="font-size:15px;color:#1C1C1A;font-weight:400;">CC51224 · Charities Act 2005</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-reveal data-d="1" style="flex:1;background:white;padding:52px 48px;border:1px solid #EDE4D8;">
+        <p style="font-size:10px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:#9B8B7B;margin-bottom:28px;" id="tr-enquiry-label" data-tr="tr-enquiry-label">Send an Enquiry</p>
+        <form action="mailto:horsesensetrust@gmail.com" method="get" enctype="text/plain" style="display:flex;flex-direction:column;gap:18px;">
+          <div style="display:flex;flex-direction:column;gap:0px;">
+            <label style="font-size:10px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:#9B8B7B;" id="tr-form-name-lbl" data-tr="tr-form-name-lbl">Your Name</label>
+            <input type="text" name="name" placeholder="Ko wai tō ingoa? (Your name)" style="border:1px solid #EDE4D8;background:#FDFAF6;padding:14px 16px;font-size:14px;font-family:'Manrope',sans-serif;color:#1C1C1A;outline:none;transition:border-color .2s;" onfocus="this.style.borderColor='#FFC30B'" onblur="this.style.borderColor='#EDE4D8'"/>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:0px;">
+            <label style="font-size:10px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:#9B8B7B;" id="tr-form-email-lbl" data-tr="tr-form-email-lbl">Email Address</label>
+            <input type="email" name="email" placeholder="you@example.com" style="border:1px solid #EDE4D8;background:#FDFAF6;padding:14px 16px;font-size:14px;font-family:'Manrope',sans-serif;color:#1C1C1A;outline:none;transition:border-color .2s;" onfocus="this.style.borderColor='#FFC30B'" onblur="this.style.borderColor='#EDE4D8'"/>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:0px;">
+            <label style="font-size:10px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:#9B8B7B;" id="tr-form-subject-lbl" data-tr="tr-form-subject-lbl">How can we help?</label>
+            <select name="subject" style="border:1px solid #EDE4D8;background:#FDFAF6;padding:14px 16px;font-size:14px;font-family:'Manrope',sans-serif;color:#1C1C1A;outline:none;appearance:none;transition:border-color .2s;" onfocus="this.style.borderColor='#FFC30B'" onblur="this.style.borderColor='#EDE4D8'">
+              <option value="">Select an option…</option>
+              <option>Te Mauri Whakapapa o te Hōiho Wānanga</option>
+              <option>Therapy Sessions</option>
+              <option>Workshops &amp; Retreats</option>
+              <option>Team Building</option>
+              <option>Professional Training / Supervision</option>
+              <option>Volunteering</option>
+              <option>Koha / Donation</option>
+              <option>General Enquiry</option>
+            </select>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:0px;">
+            <label style="font-size:10px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:#9B8B7B;" id="tr-form-msg-lbl" data-tr="tr-form-msg-lbl">Message</label>
+            <textarea name="body" rows="4" placeholder="Tell us a little about yourself and what you are looking for…" style="border:1px solid #EDE4D8;background:#FDFAF6;padding:14px 16px;font-size:14px;font-family:'Manrope',sans-serif;color:#1C1C1A;outline:none;resize:vertical;transition:border-color .2s;" onfocus="this.style.borderColor='#FFC30B'" onblur="this.style.borderColor='#EDE4D8'"></textarea>
+          </div>
+          <button type="submit" class="btn-dk" style="background:#C4824A;color:white;border:none;padding:16px 36px;font-size:10px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;cursor:pointer;font-family:'Manrope',sans-serif;transition:background .2s;text-align:center;" id="tr-form-submit" data-tr="tr-form-submit">Send Enquiry</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer style="background:#3D5A72;padding:80px 0 40px;">
+  <div class="cw" style="max-width:1100px;margin:0 auto;padding:0 56px;text-align:center;">
+    <p style="font-family:'Cormorant Garamond',serif;font-size:clamp(19px,2.3vw,27px);font-style:italic;font-weight:300;color:#fff;line-height:1.6;max-width:840px;margin:0 auto 18px;">“Mā te rongo, ka mōhio; mā te mōhio, ka mārama; mā te mārama, ka mātau; mā te mātau, ka ora.”</p>
+    <p style="font-size:13px;font-weight:300;color:rgba(255,255,255,.68);line-height:1.7;max-width:640px;margin:0 auto 40px;">Through listening comes knowledge; through knowledge comes understanding; through understanding comes wisdom; through wisdom comes life and wellbeing.</p>
+    <div style="width:46px;height:1px;background:rgba(255,255,255,.25);margin:0 auto 34px;"></div>
+    <div style="display:flex;justify-content:center;gap:14px 30px;flex-wrap:wrap;margin-bottom:34px;">
+      <a href="about.html" style="font-size:11px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.82);transition:color .2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.82)'">About Our Kaupapa</a>
+      <a href="services.html" style="font-size:11px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.82);transition:color .2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.82)'">Our Services</a>
+      <a href="ip.html" style="font-size:11px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.82);transition:color .2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.82)'">IP &amp; Use of Materials</a>
+      <a href="terms.html" style="font-size:11px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.82);transition:color .2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.82)'">Terms of Use</a>
+      <a href="index.html#contact-section" style="font-size:11px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.82);transition:color .2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.82)'">Contact Us</a>
+    </div>
+    <p style="font-size:12px;color:rgba(255,255,255,.82);margin-bottom:8px;">© 2026 H.E.A.R.T.S. Charitable Trust. All rights reserved.</p>
+    <p style="font-size:11px;color:rgba(255,255,255,.6);letter-spacing:.04em;margin-bottom:6px;">Registered Charity CC51224</p>
+    <p style="font-size:11px;font-style:italic;color:rgba(255,255,255,.55);">Grounded in bicultural practice, trauma-informed care, and horse-human healing.</p>
+    <div style="margin-top:30px;"><a href="#" id="shielded-logo" style="display:inline-block;opacity:.75;transition:opacity .2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='.75'"><img alt="Shielded" src="https://shielded.co.nz/img/custom-logo.png" height="48" width="48" style="display:block;margin:0 auto;"/></a></div>
+  </div>
+  <div style="text-align:center;padding:22px 0 6px;border-top:1px solid rgba(255,255,255,.1);margin-top:34px;">
+    <p style="font-size:13px;color:rgba(255,255,255,.6);font-weight:300;">Website proudly made by <a href="https://techwizards.co.nz/" target="_blank" rel="noopener" style="color:rgba(255,255,255,.75);font-weight:400;text-decoration:underline;text-underline-offset:3px;transition:color .2s;" onmouseover="this.style.color='white'" onmouseout="this.style.color='rgba(255,255,255,.75)'">Tech Wizards</a></p>
+  </div>
+</footer>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  componentDidMount() {
+    // Quote hover: enlarge + white glow
+    const hq = document.getElementById('hq-text');
+    if (hq) {
+      hq.addEventListener('mouseenter', () => {
+        hq.style.transform = 'scale(1.03)';
+        hq.style.color = 'rgba(255,255,255,1)';
+        hq.style.textShadow = '0 0 40px rgba(255,255,255,.35), 0 0 80px rgba(255,255,255,.15)';
+      });
+      hq.addEventListener('mouseleave', () => {
+        hq.style.transform = 'scale(1)';
+        hq.style.color = 'rgba(255,255,255,.88)';
+        hq.style.textShadow = 'none';
+      });
+    }
+    // --- NAV scroll behaviour ---
+    const nav = document.getElementById('hn-nav');
+    const onS = () => nav && nav.classList.toggle('nav-s', window.scrollY > 50);
+    window.addEventListener('scroll', onS, {passive: true}); onS();
+
+    // --- Scroll-reveal ---
+    const io = new IntersectionObserver(es => {
+      es.forEach(e => { if (e.isIntersecting) { e.target.setAttribute('data-vis', ''); io.unobserve(e.target); } });
+    }, {threshold: 0.08, rootMargin: '0px 0px -40px 0px'});
+    document.querySelectorAll('[data-reveal]').forEach(el => io.observe(el));
+
+    // --- Mobile menu ---
+    const burger = document.getElementById('hn-burger');
+    const mm = document.getElementById('hn-mm');
+    if (burger && mm) {
+      const toggle = open => { mm.classList.toggle('open', open); document.body.style.overflow = open ? 'hidden' : ''; };
+      burger.addEventListener('click', () => toggle(!mm.classList.contains('open')));
+      const cl = document.getElementById('hn-close');
+      if (cl) cl.addEventListener('click', () => toggle(false));
+      mm.querySelectorAll('a').forEach(a => a.addEventListener('click', () => toggle(false)));
+    }
+
+    // --- Slideshow (order set in slideshow-manager.html) ---
+    const SS_ALT = {"01":"A man connecting with a chestnut horse in an open field at H.E.A.R.T.S. Charitable Trust, Ōtaki, demonstrating equine-assisted trauma therapy.","02":"An intimate moment of emotional connection and nervous system regulation with a bay horse on the Kāpiti Coast.","03":"A group of participants experiencing whanaungatanga and collective healing in a medicine circle paddock environment.","04":"An inclusive, safe healing space demonstrating vulnerability and surrender with a resting horse at H.E.A.R.T.S. Trust.","05":"Bicultural Rongoā Māori illustration depicting a sacred ancestral hongi in native bush with native birds, representing whakapapa and environmental tohu."};
+    const DURATION = 8000;
+    const track = document.getElementById('ss-track');
+    const prog  = document.getElementById('ss-progress');
+    let slides = Array.from(document.querySelectorAll('.ss-slide'));
+    let cur = 0, timer = null;
+
+    const startProgress = () => {
+      if (timer) clearTimeout(timer);
+      if (prog) { prog.style.transition = 'none'; prog.style.width = '0%'; }
+      requestAnimationFrame(() => requestAnimationFrame(() => {
+        if (prog) { prog.style.transition = 'width ' + DURATION + 'ms linear'; prog.style.width = '100%'; }
+      }));
+      timer = setTimeout(() => goTo(cur + 1), DURATION);
+    };
+    const goTo = idx => {
+      if (!slides.length) return;
+      slides[cur].style.opacity = '0';
+      cur = (idx + slides.length) % slides.length;
+      slides[cur].style.opacity = '1';
+      startProgress();
+    };
+    const applyOrder = list => {
+      if (!track || !Array.isArray(list) || !list.length) return;
+      const cs = slides.map(s => { const i = s.querySelector('img'); return i ? i.getAttribute('src').split('?')[0] : ''; });
+      if (cs.length === list.length && list.every((s, i) => cs[i] === s)) return;
+      track.innerHTML = list.map((src, i) =>
+        '<div class="ss-slide" style="position:absolute;inset:0;opacity:' + (i === 0 ? '1' : '0') + ';transition:opacity 1.2s ease;">' +
+        '<img src="' + src + '?format=2500w" alt="' + (SS_ALT[src.split('/').pop().split('.')[0]] || '') + '" style="width:100%;height:100%;object-fit:cover;object-position:center 32%;"' + (i === 0 ? ' loading="eager"' : '') + '/></div>'
+      ).join('');
+      slides = Array.from(document.querySelectorAll('.ss-slide'));
+      cur = 0;
+      startProgress();
+    };
+
+    try { const ls = localStorage.getItem('hearts-slideshow-order-v2'); if (ls) applyOrder(JSON.parse(ls)); } catch (e) {}
+    startProgress();
+    fetch('slideshow-order.json', { cache: 'no-store' })
+      .then(r => r.ok ? r.json() : null)
+      .then(d => { if (d && d.slides && !localStorage.getItem('hearts-slideshow-order-v2')) applyOrder(d.slides); })
+      .catch(() => {});
+
+    this._c = () => {
+      window.removeEventListener('scroll', onS);
+      if (timer) clearTimeout(timer);
+      document.body.style.overflow = '';
+    };
+  }
+  componentWillUnmount() { this._c && this._c(); }
+}
+</script>
+
+<!-- TE REO MĀORI SWITCHER -->
+<style>
+  @keyframes pillGlow {
+    0%,100%{box-shadow:0 0 0 0 rgba(255,255,255,0);border-color:rgba(255,255,255,.4);}
+    50%{box-shadow:0 0 0 8px rgba(255,255,255,.12),0 0 28px rgba(255,255,255,.25);border-color:rgba(255,255,255,.8);}
+  }
+  @keyframes pillFadeIn {
+    from{opacity:0;transform:translateY(12px);}
+    to{opacity:0;transform:translateY(0);}
+  }
+  #tr-pill.first-visit { animation: pillGlow 2s ease-in-out infinite; }
+  #tr-hint { animation: pillFadeIn .5s ease both; }
+  @keyframes navGlow {
+    0%,100%{box-shadow:0 0 0 0 rgba(255,255,255,0);border-color:rgba(255,255,255,.35);}
+    50%{box-shadow:0 0 0 6px rgba(255,255,255,.10),0 0 22px rgba(255,255,255,.35);border-color:rgba(255,255,255,.95);}
+  }
+  #tr-nav-lang.first-visit { animation: navGlow 2s ease-in-out infinite; }
+  #tr-navhint { animation: pillFadeIn .5s ease both; }
+</style>
+
+<!-- Nav switcher hint (first visit only) -->
+<div id="tr-navhint" style="display:none;"></div>
+
+<!-- Floating hint label (first visit only) -->
+<div id="tr-hint" data-tr="tr-hint" style="position:fixed;bottom:60px;right:16px;z-index:9999;display:none!important;flex-direction:column;align-items:flex-end;gap:4px;pointer-events:none;">
+  <p style="font-size:11px;font-weight:500;color:white;letter-spacing:.04em;text-shadow:0 1px 12px rgba(0,0,0,.7);white-space:nowrap;">This site is available in Te Reo Māori</p>
+  <div style="width:1px;height:8px;background:rgba(255,255,255,.4);margin-right:20px;"></div>
+</div>
+
+<!-- LANGUAGE TOGGLE PILL (persistent) -->
+<div id="tr-pill" data-tr="tr-pill" onclick="toggleLangMenu()" hidden style="display:none!important;position:fixed;bottom:16px;right:16px;z-index:9998;background:rgba(255,255,255,0.82);border:1px solid rgba(0,0,0,0.1);padding:9px 20px;display:none;align-items:center;gap:8px;cursor:pointer;box-shadow:0 2px 12px rgba(0,0,0,0.08);backdrop-filter:blur(8px);transition:box-shadow .2s;" onmouseover="this.style.boxShadow='0 4px 20px rgba(0,0,0,0.14)'" onmouseout="this.style.boxShadow='0 2px 12px rgba(0,0,0,0.08)'">
+  <span style="font-size:9px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:#1C1C1A;transition:color .3s;" id="tr-pill-label" data-tr="tr-pill-label">EN | TE REO</span>
+</div>
+
+<script>
+// ===== TE REO MĀORI TRANSLATIONS =====
+var TR = {
+  // HERO
+  'tr-hero-h1':      { en: 'Restoring Right Relationship', mi: 'Te Whakaora i te Hononga Tika' },
+  'tr-hero-maori':   { en: 'Kotahitanga o te Tangata me te Hōiho', mi: 'Kotahitanga o te Tangata me te Hōiho' },
+  'tr-hero-sub':     { en: 'The unity between people and horses that restores connection, dignity, and wellbeing.', mi: 'Ko te kotahitanga o te tangata me te hōiho e whakaora ana i te hononga, i te mana, me te oranga.' },
+
+  // MŌ MĀTOU + VISION + MISSION
+  'tr-mm-label':     { en: 'Mō Mātou', mi: 'Mō Mātou' },
+  'tr-mm-h2':        { en: 'Coming back to the Heart', mi: 'Hoki Mai ki te Ngākau' },
+    'tr-mm-p1':        { en: 'H.E.A.R.T.S. Charitable Trust was born from a deep conviction that healing is not simply a clinical procedure — it is a living, relational, and culturally grounded experience.', mi: 'I puta mai a H.E.A.R.T.S. Charitable Trust i te tino whakapono, ehara te whakaora i te mea he tukanga haumanu noa iho — engari he wheako ora, he wheako whanaungatanga, ā, he wheako e ū ana ki te ahurea.' },
+    'tr-mm-p2':        { en: 'We exist for those who need to be met exactly where they are: with dignity, warmth, and an understanding that their story — and the stories carried through their whakapapa — matter.', mi: 'Ko tā mātou kaupapa, he noho tahi ki te taha o te tangata i te wāhi tonu e tū ana ia — me te manaaki, te whakamana, te mahana, me te mōhio he mea nui tōna kōrero, me ngā kōrero tuku iho e kawea ana i roto i tōna whakapapa.' },
+    'tr-mm-p3':        { en: 'Through relational horse–human experiences, we create space for tangata and whānau to reconnect with themselves, each other, their whakapapa, and whenua. In these moments of kotahitanga — unity between people and horses — individuals rediscover connection, belonging, and resilience that can support lasting change.', mi: 'Mā ngā wheako whanaungatanga i waenganui i te tangata me te hōiho, ka waihanga mātou i tētahi wāhi e taea ai e te tangata me te whānau te hono anō ki a rātou anō, ki tō rātou whakapapa, me te whenua. I roto i ēnei wā o te kotahitanga — te tū ngātahi o te tangata me te hōiho — ka kitea anō e te tangata te hononga, te tūrangawaewae, me te manawaroa; ngā taonga e āhei ai te whakatipu panonitanga toitū mō te wā roa.' },
+  'tr-www-1-h':      { en: 'Who We Are', mi: 'Ko Wai Mātou' },
+  'tr-www-1-p':      { en: 'A charitable trust grounded in the belief that healing is relational, embodied, and culturally rooted.', mi: 'He tarahiti atawhai e ū ana ki te whakapono, he mea whanaungatanga, he mea whai-tinana, ā, he mea pūtake ki te ahurea te whakaora.' },
+  'tr-www-2-h':      { en: 'Who We Serve', mi: 'Ko Wai Mā Mātou e Manaaki' },
+  'tr-www-2-p':      { en: 'We are dedicated to supporting rangatahi Māori, all youth, survivors of sexual abuse, and those navigating suicidal ideation.', mi: 'Ko te tangata me te whānau e rapu ana i te whakamana, i te hononga anō, me tētahi wāhi e whakanuia ai, e manaakitia ai ō rātou kōrero me tō rātou whakapapa.' },
+  'tr-www-3-h':      { en: 'What We Do', mi: 'He Aha Tā Mātou Mahi' },
+  'tr-www-3-p':      { en: 'We offer relational horse–human experiences that support reconnection with self, whānau, whakapapa, and whenua — restoring belonging, resilience, and kotahitanga.', mi: 'Ka whakarato mātou i ngā wheako whanaungatanga i waenganui i te tangata me te hōiho, hei tautoko i te hononga anō ki a ia anō, ki te whānau, ki te whakapapa, me te whenua — hei whakaora anō i te tūrangawaewae, i te manawaroa, me te kotahitanga.' },
+  'tr-vis-label':    { en: 'Tō Mātou Moemoeā', mi: 'Tō Mātou Moemoeā' },
+  'tr-vis-h2':       { en: 'The Vision Statement', mi: 'Te Whakakitenga' },
+  'tr-vis-p':       { en: 'An Aotearoa where the mauri of the horse reweaves the broken threads of trauma, restoring tangata and whānau to a tapestry of sacred connection, dignity, and Te Tiriti-grounded belonging.', mi: 'He Aotearoa e raranga anō ai te mauri o te hōiho i ngā whenu kua whati i te wharanga, hei whakahoki i te tangata me te whānau ki te whāriki o te hononga tapu, te mana, me te tūrangawaewae e ū ana ki Te Tiriti o Waitangi.' },
+  'tr-mis-label':    { en: 'Tō Mātou Whakatakinga', mi: 'Tō Mātou Whakatakinga' },
+  'tr-mis-h2':       { en: 'The Mission Statement', mi: 'Te Whakatakotoranga Kaupapa' },
+  'tr-mis-p':       { en: 'To walk alongside tangata and whānau through relational horse–human experiences that support healing from trauma and restore right relationship with self, whakapapa, and whenua — nurturing lifelong resilience and honouring Te Tiriti o Waitangi.', mi: 'Ko te haere tahi ki te taha o te tangata me te whānau, mā ngā wheako whanaungatanga i waenganui i te tangata me te hōiho, hei tautoko i te whakaoranga mai i ngā wharanga o te trauma, me te whakahoki anō i te hononga tika ki a ia anō, ki tōna whakapapa, me te whenua — hei poipoi i te manawaroa mō te roanga o te oranga, me te whakamana i Te Tiriti o Waitangi.' },
+  'tr-btn-learn':    { en: 'Learn More', mi: 'Ākona Atu' },
+  'tr-btn-support':  { en: 'Support Our Mission', mi: 'Tautoko i Tō Mātou Kaupapa' },
+
+  // INTRO
+  'tr-intro-label':  { en: 'Our Kaupapa', mi: 'Tō Mātou Kaupapa' },
+  'tr-intro-h2':     { en: 'Healing where body,<br>spirit, and land meet.', mi: 'Te whakamāui i te wāhi e tūtaki ai<br>te tinana, te wairua me te whenua.' },
+  'tr-intro-p1':     { en: 'We are committed to walking alongside those who need it most, through culturally grounded, holistic care. Rooted in tikanga Māori, our work addresses intergenerational trauma by fostering kotahitanga (unity), strengthening whanaungatanga (connection), and honouring whakapapa (genealogy).', mi: 'E ngākaunui ana mātou ki te hīkoi tahi me te hunga e tino matea ana, mā ngā tikanga ā-iwi me ngā mahi haumaru. I runga i ngā tikanga Māori, ka whakautua e ā mātou mahi ngā mamae whakapapa mā te kōrero kotahitanga, mā te mahi whanaungatanga, me te manaaki i te whakapapa.' },
+  'tr-intro-p2':     { en: 'Through equine-supported therapy, systemic family constellation work, and collaboration with clinical professionals, we take a whole-person approach — mind, body, and spirit. Guided by the principles of waiora, we create safe, inclusive spaces for healing, empowering individuals to reconnect with themselves, their communities, and the possibility of a more life-affirming future.', mi: 'Mā ngā mahi ā-hōiho haumaru, ngā mahi ā-whānau, me ngā hononga ki ngā mātanga hauora, ka āta titiro mātou ki te tangata katoa — ki te hinengaro, te tinana, me te wairua. I ārohia e ngā mātāpono o te waiora, ka hangaia e mātou ngā wāhi haumaru, ātaahua, hei whakamāui, hei whakaū anō i ngā hononga ki a rātou anō, ki ō rātou hapori, me te tūāpō o āpōpō.' },
+  'tr-img-caption':  { en: 'A living, relational<br>practice.', mi: 'He tikanga ora,<br>he tikanga whanaungatanga.' },
+  'tr-approach-link':{ en: 'Our Approach →', mi: 'Tō Mātou Huarahi →' },
+
+  // WHO WE SUPPORT
+  'tr-who-serve':    { en: 'Those We Walk Alongside', mi: 'Ko Rātou Ka Haere Tahi' },
+  'tr-who-h2':       { en: 'Those who carry more<br>than they should alone.', mi: 'Ko rātou e taumaha ana<br>neke atu i tō rātou kaha.' },
+  'tr-who-01-p':     { en: 'Young people navigating identity, belonging, and the weight of intergenerational experience.', mi: 'Ko ngā taiohi e rapu ana i tō rātou tuakiri, i tō rātou tūāhu, me te taumaha o ngā wheako whakapapa.' },
+  'tr-who-02-title': { en: 'Survivors of Trauma', mi: 'Ngā Toiora i ngā Mamae' },
+  'tr-who-02-p':     { en: 'Those healing from sexual abuse and trauma, finding safety and restoration through relationship.', mi: 'Ko rātou e whakamāui ana i ngā mamae tūkino, e kimi ana i te haumaru me te ora anō mā ngā hononga.' },
+  'tr-who-03-title': { en: 'Those in Crisis', mi: 'Ngā Tāngata i roto i te Mate' },
+  'tr-who-03-p':     { en: 'Individuals navigating suicidal ideation, guided toward hope and a more life-affirming future.', mi: 'Ko ngā tāngata e ārai ana i te whakamomori, e ārohia ana ki te tūāpō me te ora.' },
+
+  // PRACTICE
+  'tr-practice-label':{ en: 'Our Practice', mi: 'Tō Mātou Tikanga' },
+  'tr-practice-h2':  { en: 'The medicine circle — where the unseen becomes visible.', mi: 'Te porowhita rongoā — ko te wāhi e kitea ai ngā mea ngaro.' },
+  'tr-practice-p1':  { en: 'We work alongside ngā hōiho within a medicine circle — a sacred relational space where what is unseen can be safely revealed. Each horse holds a unique therapeutic presence, representing aspects of connection, truth, strength, vulnerability, and love.', mi: 'Ka mahi tahi mātou me ngā hōiho i roto i te porowhita rongoā — he wāhi tapu whakawhanaungatanga, i reira ka whakaaturia ngā mea kē haumaru ai. Ko ia hōiho, he āhua ōkawa ōna, e tohu ana i ngā āhuatanga o te hononga, te pono, te kaha, te ngākau māhaki, me te aroha.' },
+  'tr-practice-p2':  { en: 'Without words needing to be spoken, the horses respond to the emotional and relational field of the person present. Where they stand within the circle reflects what is happening beneath the surface — the places of longing, disconnection, or unresolved experience. Through this profound mirroring, a path toward healing begins to emerge.', mi: 'Ahakoa kāore he kupu e kōrerohia ana, ka urupare ngā hōiho ki te āhua o ngā kare ā-roto me ngā hononga o te tangata e tū ana. Ko te wāhi e tū ana rātou i roto i te porowhita, ko ia tērā e whakaata ana i ngā āhuatanga o raro — ko ngā wāhi hiahia, whakamoea, rānei kāore anō kia whakatatūhia. Mā tēnei whakaata hōhonu, ka timata te ara ki te whakamāui.' },
+  'tr-practice-p3':  { en: 'Through this process, we are able to gently and directly access the core relational wounds that may sit within a person — often shaped by lived experience, and at times carried across generations.', mi: 'Mā roto i tēnei haerenga, ka āhei mātou ki te toro mārie, ki te toro tika hoki ki ngā mamae hōhonu o te hononga kei roto i te tangata — ngā mamae i hua ake ai i ngā wheako o te ao, ā, i ētahi wā ka kawea mai hoki i roto i ngā reanga maha.' },
+  'tr-practice-link':{ en: 'Read More →', mi: 'Pānui Atu →' },
+
+  // PULL QUOTE
+    'tr-quote':        { en: '“Healing is not something done to a person — it emerges through relationship. In kotahitanga with ngā hōiho, the path of healing, self-discovery, and transformation are revealed.”', mi: '“Ehara te whakaoranga i te mea ka mahia ki runga i te tangata — engari he mea ka puāwai mai i roto i te hononga. Mā roto i te kotahitanga ki ngā hōiho, ka whakakitia te ara ki te whakaora, ki te rapu i a koe anō, me te panoni.”' },
+  // VIDEO
+  'tr-story-label':  { en: 'Our Story', mi: 'Tō Mātou Kōrero' },
+  'tr-story-h2':     { en: 'Witness the Connection', mi: 'Kite i te Hononga' },
+  'tr-video-desc':   { en: 'See how relationship with the horse can open space for healing, awareness, and transformation.', mi: 'Kite i te āhua o te hononga o te tangata me te hōiho e hanga ana i ngā wā hōhonu o te whakamāui me te hurihanga.' },
+
+  // VALUES
+  'tr-values-label': { en: 'Our Values', mi: 'Ō Mātou Uaratanga' },
+  'tr-values-h2':    { en: 'Guided by what endures.', mi: 'Ārohia e ngā mea tūāhuroa.' },
+  'tr-val-1-sub':    { en: 'Unity &amp; Collective Connection', mi: 'Kotahitanga me te Hononga ā-Iwi' },
+  'tr-val-1-p':      { en: 'Healing through shared belonging. We hold space for individuals and communities to reconnect — with themselves, with each other, and with the whenua.', mi: 'Te whakamāui mā te noho tahi. Ka tiaki mātou i tētahi wāhi mō ngā tāngata me ngā hapori kia hono anō — ki a rātou anō, ki ētahi atu, me te whenua.' },
+  'tr-val-2-sub':    { en: 'Relationships &amp; Belonging', mi: 'Ngā Hononga me te Tūāhu' },
+  'tr-val-2-p':      { en: 'Our work centres the relationships that make us whole — human, horse, and the living relational systems that shape us across generations.', mi: 'Ka ārahina ā mātou mahi e ngā hononga e oti ai tātou — tangata, hōiho, me ngā pūnaha whanaungatanga ora e hanga ana i a tātou mō ngā whakatupuranga.' },
+  'tr-val-3-sub':    { en: 'Care, Respect &amp; Reciprocity', mi: 'Te Tiaki, te Manaaki, me te Utu' },
+  'tr-val-3-p':      { en: 'Every person who enters this space is received with dignity, warmth, and respect. Care is not conditional — it is the ground from which everything grows.', mi: 'Ko ia tangata e tomo ana ki tēnei wāhi, ka manākitia me te mana, me te māia, me te ngākau aroha. Ehara te tiaki i mea i ruia mai i ētahi āhuatanga — ko ia tērā ko te puna e tupu ai ngā mahi whakamāui katoa.' },
+  
+  // PRACTICE BULLETS
+  'tr-bullet-1':     { en: 'Nervous system regulation — feeling safe in the body', mi: 'Te whakatau i te pūnaha io — te rongo i te haumaru ki roto i te tinana' },
+  'tr-bullet-2':     { en: 'Relational repair — experiencing trust, attunement, and connection', mi: 'Te whakaora i ngā hononga — te wheako i te whakawhirinaki, te aro, me te tūhonotanga' },
+  'tr-bullet-3':     { en: 'Ancestral awareness — recognising patterns carried through whakapapa', mi: 'Te mōhio ki ngā taonga tuku iho o ngā tūpuna — te kite me te mārama ki ngā tauira ka rere mai ana i roto i te whakapapa' },
+  'tr-bullet-4':     { en: 'Return to self — reconnecting with inherent strength and light', mi: 'Te hoki anō ki a tātou anō — te tūhono anō ki tō tātou kaha me tō tātou māramatanga o roto' },
+
+  // TESTIMONIAL QUOTES
+  'tr-test-q1':      { en: 'They do this in a calm and gentle way, giving the clients an experience of their inner world without imposing their own views or issues upon them.', mi: 'He mahi mārie, he mahi atawhai tā rātou. Ka āhei te tangata ki te kite i tōna ao o roto, kāore rātou e whakauru mai i ō rātou ake whakaaro, i ō rātou ake taumahatanga rānei ki runga i te tangata.' },
+  'tr-test-a1':      { en: 'Child Psychiatrist (Norway) · Visiting Practitioner to the H.E.A.R.T.S. Medicine Circle, Aotearoa', mi: 'Kaimātai Hinengaro Tamariki (Norway) · Kaiwhakaora Manuhiri ki te Porowhita Rongoā o H.E.A.R.T.S., Aotearoa' },
+  'tr-test-q2':      { en: 'What Jenny and her team provide in the healing field is phenomenal. They provide a space of no judgement, so one is able to unearth whatever is ready to be released and healed in that moment.', mi: 'He mea whakamīharo rawa atu tā Jenny me tōna tīma e kawe mai nei ki te ao whakaora. Ka hanga rātou i tētahi wāhi kāore he whakatau, kāore he whakahē, kia taea ai e te tangata te whakapuaki me te tuku i ngā mea kua rite kia tukuna, kia whakaorangia i taua wā tonu.' },
+  'tr-test-a2':      { en: 'Workshop Participant', mi: 'Kaiuru Hui / Wānanga' },
+  'tr-test-q3':      { en: 'I was able to cry. I was able to let go. I was able to heal.', mi: 'I āhei ahau ki te tangi.<br>I āhei ahau ki te tuku.<br>I āhei ahau ki te whakaora.' },
+  'tr-test-a3':      { en: 'Social Worker (The Netherlands) · International Wānanga Participant, Ōtaki', mi: 'Kaimahi Toko i te Ora (Netherlands) · Kaiuru Wānanga ā-Ao, Ōtaki' },
+
+  // TESTIMONIALS
+  'tr-test-label':   { en: 'Ngā Kupu Tautoko', mi: 'Ngā Kupu Tautoko' },
+  'tr-test-h2':      { en: 'Words of Support', mi: 'Words of Support' },
+  'tr-voices-desc':  { en: 'Every journey is unique. Here, we share a glimpse of the experiences, insights, and shifts that people have carried with them after spending time with our herd.<br><br>Through connection with the horses, many discover new perspectives, a deeper understanding of themselves, and possibilities they may not have seen before.<br><br>These are their words, their reflections, and their experiences – shared in the hope that they may offer insight, encouragement, and a sense of what becomes possible when we reconnect with ourselves and the relationships that shape our lives.', mi: 'Every journey is unique. Here, we share a glimpse of the experiences, insights, and shifts that people have carried with them after spending time with our herd.<br><br>Through connection with the horses, many discover new perspectives, a deeper understanding of themselves, and possibilities they may not have seen before.<br><br>These are their words, their reflections, and their experiences – shared in the hope that they may offer insight, encouragement, and a sense of what becomes possible when we reconnect with ourselves and the relationships that shape our lives.' },
+  'tr-test-link':    { en: 'Read More Stories →', mi: 'Pānui Atu i ngā Kōrero →' },
+
+  // CTA
+  'tr-cta-label':    { en: 'Connect With Us', mi: 'Whakapā Mai' },
+  'tr-cta-h2':       { en: "Let's Work Together", mi: 'Kia Mahi Tahi Tātou' },
+  'tr-cta-sub':      { en: 'Kia mahi tahi tātou', mi: 'Kia mahi tahi tātou' },
+  'tr-cta-p':        { en: "Whether you're seeking healing, referring someone, or looking to collaborate — we would love to hear from you.", mi: 'Ahakoa e rapu ana koe i te whakamāui, e tuku tūāhu ana, e kimi ana rānei i tētahi hoa mahi — ka ngākau nui mātou ki te rongo i a koe.' },
+  'tr-cta-btn':      { en: 'Begin the Conversation', mi: 'Tīmata te Kōrero' },
+
+  // CONTACT
+  'tr-contact-h2':   { en: 'Get in Touch', mi: 'Whakapā Mai' },
+  'tr-contact-p':    { en: 'Whether you are seeking support for yourself or your whānau, making a clinical referral, interested in our upcoming workshops, or looking to support our mahi through a koha, we warmly welcome you to connect with us.', mi: 'Ahakoa e rapu ana koe i tautoko māu anō, i tētahi tūāhu mō tētahi kiritaki, e hiahia ana rānei ki ā mātou hōtaka me ngā akoranga, ka ngākau nui mātou ki te rongo i a koe. Ka urupare mātou ki ngā pātai katoa ā-tangata.' },
+  'tr-enquiry-label':{ en: 'Send an Enquiry', mi: 'Tukua he Pātai' },
+  'tr-form-name-lbl':{ en: 'Your Name', mi: 'Tō Ingoa' },
+  'tr-form-email-lbl':{ en: 'Email Address', mi: 'Tō Īmēra' },
+  'tr-form-subject-lbl':{ en: 'How can we help?', mi: 'Me pēhea tō mātou āwhina?' },
+  'tr-form-msg-lbl': { en: 'Message', mi: 'Karere' },
+  'tr-form-submit':  { en: 'Send Enquiry', mi: 'Tukua he Pātai' },
+
+  // FOOTER
+  'tr-footer-tagline':{ en: 'Empowering the community through horses, using Māori customs, to enhance the well-being of those seeking wellness — through manaakitanga and whanaungatanga.', mi: 'E whakamanahia ana te hapori mā ngā hōiho, mā ngā tikanga Māori, hei whakapakari i te hauora o rātou e rapu ana i te ora — mā te manaakitanga me te whanaungatanga.' },
+  'tr-footer-nav-lbl':{ en: 'Navigation', mi: 'Aratohu' }
+};
+
+function switchLang(lang) {
+  Object.keys(TR).forEach(function(id) {
+    try {
+      document.querySelectorAll('[data-tr="'+id+'"]').forEach(function(el){ el.innerHTML = TR[id][lang] || TR[id].en; });
+    } catch(e) { console.warn('TR skip:', id, e.message); }
+  });
+  localStorage.setItem('hearts-lang', lang);
+  var hint2 = document.getElementById('tr-hint'); if (hint2) hint2.style.display = 'none';
+  var pill = document.getElementById('tr-pill');
+  var pillLabel = document.getElementById('tr-pill-label');
+  if (pill) { pill.style.display = 'none'; }
+  if (pillLabel) { pillLabel.textContent = lang === 'mi' ? 'TE REO | EN' : 'EN | TE REO'; }
+  var navLabel = document.getElementById('tr-nav-lang-label');
+  if (navLabel) { navLabel.textContent = lang === 'mi' ? 'Te Reo | EN' : 'EN | Te Reo'; }
+  document.documentElement.lang = lang === 'mi' ? 'mi' : 'en';
+}
+
+function toggleLangMenu() {
+  var current = localStorage.getItem('hearts-lang') || 'en';
+  switchLang(current === 'mi' ? 'en' : 'mi');
+}
+
+// Delegated binding — survives DOM re-renders that drop listeners
+document.addEventListener('click', function(e){
+  var t = e.target && e.target.closest ? e.target.closest('#tr-nav-lang,#tr-pill,#tr-mobile-lang,[data-lang-toggle]') : null;
+  if (t) { e.preventDefault(); toggleLangMenu(); }
+}, true);
+
+function updatePillTheme() {
+  var pill = document.getElementById('tr-pill');
+  var label = document.getElementById('tr-pill-label');
+  if (!pill || !label) return;
+  pill.style.opacity = '0';
+  var el = document.elementFromPoint(window.innerWidth - 30, window.innerHeight - 30);
+  pill.style.opacity = '1';
+  if (!el) return;
+  function getLum(node) {
+    while (node && node !== document.documentElement) {
+      var s = window.getComputedStyle(node);
+      // Background image = treat as dark
+      if (s.backgroundImage && s.backgroundImage !== 'none') return 0.2;
+      var bg = s.backgroundColor;
+      if (bg && bg !== 'rgba(0, 0, 0, 0)' && bg !== 'transparent') {
+        var m = bg.match(/\d+/g);
+        if (m) return (0.299*+m[0] + 0.587*+m[1] + 0.114*+m[2]) / 255;
+      }
+      node = node.parentElement;
+    }
+    return 0.9;
+  }
+  var lum = getLum(el);
+  if (lum > 0.5) {
+    // Light bg — dark pill
+    pill.style.borderColor = 'rgba(0,0,0,0.3)';
+    label.style.color = '#1C1C1A';
+  } else {
+    // Dark bg — white pill
+    pill.style.borderColor = 'rgba(255,255,255,0.55)';
+    label.style.color = 'white';
+  }
+}
+// (floating pill retired — nav switcher inherits the nav's own colour states)
+
+function playVideo(el, videoId) {
+  var iframe = document.createElement('iframe');
+  iframe.src = 'https://www.youtube.com/embed/' + videoId + '?autoplay=1&rel=0&enablejsapi=1';
+  iframe.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;border:none;';
+  iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+  iframe.allowFullscreen = true;
+  // Listen for YouTube errors (e.g. Error 150/153 = embedding disabled)
+  window.addEventListener('message', function onMsg(e) {
+    try {
+      var data = JSON.parse(e.data);
+      if (data.event === 'onError' && (data.info === 150 || data.info === 153 || data.info === 101)) {
+        window.removeEventListener('message', onMsg);
+        window.open('https://www.youtube.com/watch?v=' + videoId, '_blank');
+        // Restore thumbnail
+        el.innerHTML = origHTML;
+        el.style.cursor = 'pointer';
+        wireVideos();
+      }
+    } catch(e2){}
+  });
+  var origHTML = el.innerHTML;
+  el.innerHTML = '';
+  el.appendChild(iframe);
+  el.style.cursor = 'default';
+}
+
+// Wire video clicks
+function wireVideos() {
+  var v1 = document.getElementById('yt-v1');
+  var v2 = document.getElementById('yt-v2');
+  if (v1) { v1.style.cursor='pointer'; v1.addEventListener('click', function(){ playVideo(v1, 'i_tKP0wriWs'); }, {once:false}); }
+  if (v2) { v2.style.cursor='pointer'; v2.addEventListener('click', function(){ playVideo(v2, '0aB2zoeTDRE'); }, {once:false}); }
+}
+document.addEventListener('DOMContentLoaded', wireVideos);
+setTimeout(wireVideos, 500);
+
+// Init on load
+(function() {
+  var saved = localStorage.getItem('hearts-lang');
+  var seen = localStorage.getItem('hearts-lang-seen');
+  var pill = document.getElementById('tr-pill');
+  var hint = document.getElementById('tr-hint');
+  var pillLabel = document.getElementById('tr-pill-label');
+
+  // Switcher now lives in the nav; the floating pill is retired
+  if (pill) pill.style.display = 'none';
+
+  if (saved === 'mi') {
+    switchLang('mi');
+    if (pillLabel) pillLabel.textContent = 'TE REO | EN';
+  } else if (!seen) {
+    // First visit — glow the nav switcher and point at it (top right)
+    setTimeout(function() {
+      var nav = document.getElementById('tr-nav-lang');
+      var nh = document.getElementById('tr-navhint');
+      if (nav) nav.classList.add('first-visit');
+
+      setTimeout(function() {
+        if (nh) { nh.style.opacity='0'; nh.style.transition='opacity .8s'; setTimeout(function(){ nh.style.display='none'; }, 800); }
+        if (nav) nav.classList.remove('first-visit');
+        localStorage.setItem('hearts-lang-seen','1');
+      }, 10000);
+    }, 1200);
+  }
+
+  // Dismiss on switcher click
+  document.addEventListener('click', function(e){
+    if (e.target && e.target.closest && e.target.closest('#tr-nav-lang,[data-lang-toggle]')) {
+      var nh = document.getElementById('tr-navhint');
+      var nav = document.getElementById('tr-nav-lang');
+      if (nh) nh.style.display='none';
+      if (nav) nav.classList.remove('first-visit');
+      localStorage.setItem('hearts-lang-seen','1');
+    }
+  }, true);
+
+  // Dismiss hint on pill click
+  if (pill) {
+    pill.addEventListener('click', function() {
+      if (hint) { hint.style.opacity='0'; hint.style.transition='opacity .4s'; setTimeout(function(){ hint.style.display='none'; }, 400); }
+      pill.classList.remove('first-visit');
+      localStorage.setItem('hearts-lang-seen','1');
+    });
+  }
+})();
+</script>
+<script id="hash-scroll">(function(){function go(b){var id=location.hash.slice(1);if(!id)return;var el=document.getElementById(id);if(!el)return;var y=el.getBoundingClientRect().top+window.pageYOffset-80;window.scrollTo({top:y,behavior:b||'auto'});}
+if(location.hash){if('scrollRestoration' in history)history.scrollRestoration='manual';document.addEventListener('DOMContentLoaded',function(){go();});window.addEventListener('load',function(){go();setTimeout(go,400);setTimeout(go,1200);});}
+window.addEventListener('hashchange',function(){go('smooth');});
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href]');if(!a)return;var h=a.getAttribute('href');var m=h.match(/^(?:index\.html)?#(contact-section)$/);if(!m)return;var el=document.getElementById(m[1]);if(!el)return;e.preventDefault();var mm=document.getElementById('hn-mm');if(mm)mm.classList.remove('open','active','show');document.body.style.overflow='';history.replaceState(null,'','#'+m[1]);window.scrollTo({top:el.getBoundingClientRect().top+window.pageYOffset-80,behavior:'smooth'});});})();</script>
+</body>
+</html>

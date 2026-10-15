@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Privacy Statement — H.E.A.R.T.S. Charitable Trust</title>
+<meta name="description" content="Privacy statement for H.E.A.R.T.S. Charitable Trust.">
+  <link rel="icon" type="image/png" href="hearts-logo-sm.png"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    body{background:#F7F3EE;color:#1C1C1A;font-family:'Manrope',sans-serif;-webkit-font-smoothing:antialiased}
+    a{text-decoration:none;color:inherit}
+    .prose h3{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:400;color:#1C1C1A;margin:44px 0 14px;}
+    .prose p{font-size:15px;line-height:1.88;color:#5A524A;font-weight:300;margin-bottom:16px;}
+    .prose ul{list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:20px;padding-left:0;}
+    .prose ul li{font-size:14px;color:#5A524A;font-weight:300;line-height:1.7;padding-left:20px;position:relative;}
+    .prose ul li::before{content:'→';position:absolute;left:0;color:#C4824A;font-weight:600;}
+    .dd{position:relative;display:flex;align-items:center;}
+    .dd::after{content:'';position:absolute;top:100%;left:0;right:0;height:14px;}
+    .dd-menu{position:absolute;top:calc(100% + 10px);left:50%;transform:translateX(-50%) translateY(-6px);min-width:210px;background:rgba(15,20,15,.72);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,.18);padding:8px 0;z-index:200;opacity:0;visibility:hidden;pointer-events:none;transition:opacity .2s ease,transform .2s ease,visibility .2s;box-shadow:0 8px 32px rgba(0,0,0,.3);}
+    .dd:hover .dd-menu{opacity:1;visibility:visible;pointer-events:all;transform:translateX(-50%) translateY(0);}
+    .dd-menu a{display:block;padding:11px 22px;font-size:10px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.8);transition:all .18s;border-left:2px solid transparent;}
+    .dd-menu a:hover{color:white;border-left-color:rgba(255,255,255,.6);padding-left:28px;background:rgba(255,255,255,.08);}
+    .dd-arr{font-size:5px;margin-left:2px;display:inline-block;transition:transform .2s;opacity:.3;}
+    .dd:hover .dd-arr{transform:rotate(180deg);}
+    .mm{display:none;position:fixed;inset:0;z-index:998;background:#F3E6D3;flex-direction:column;align-items:center;justify-content:center;gap:28px}
+    .mm.open{display:flex}.mm a{font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:400;color:#1C1C1A;}.mm a:hover{color:#FFC30B}
+    .koha-btn:hover{background:#E0A800!important;}
+    @media(max-width:900px){.nl{display:none!important}.nb{display:flex!important}.cw{padding-left:24px!important;padding-right:24px!important}}
+  
+    
+    /* ===== FULL MOBILE OVERRIDES ===== */
+    @media(max-width:768px){
+      .hearts-wordmark{font-size:22px!important;letter-spacing:.05em!important;}
+      .hearts-subtitle{font-size:7.5px!important;}
+      .hearts-reg{font-size:7px!important;letter-spacing:.06em!important;}
+      
+      /* NAV */
+      .koha-btn{display:none!important;}
+      #hn-nav{padding:14px 18px 14px 12px!important;}
+      .hearts-logo-img{height:51px!important;margin-left:-14px!important;}
+      .hearts-wordmark{font-size:26px!important;}
+      .hearts-subtitle{font-size:7.5px!important;letter-spacing:.14em!important;margin-left:.14em!important;margin-top:-4px!important;}
+      .hearts-reg{display:block!important;font-size:6px!important;letter-spacing:.06em!important;margin-left:0!important;margin-top:1px!important;text-align:center!important;}
+      .hearts-wordmark{margin-left:.05em!important;}
+      .nl{display:none!important;}
+      .nb{display:flex!important;}
+
+      /* MOBILE MENU */
+      .mm a{font-size:26px!important;}
+
+      /* HERO */
+      .hcp{padding:0 20px 60px!important;}
+      #ss-prev,#ss-next{display:none!important;}
+      #ss-dots{right:50%!important;transform:translateX(50%)!important;bottom:20px!important;}
+      .hero-btns{flex-direction:column!important;gap:10px!important;}
+      .hero-btns a{width:100%!important;justify-content:center!important;box-sizing:border-box!important;}
+
+      /* ALL SPLIT LAYOUTS */
+      .tc{flex-direction:column!important;}
+      .tc>div,.tc>section,.tc>a{min-height:auto!important;width:100%!important;}
+
+      /* SECTION PADDING */
+      .sp,.cw{padding-left:20px!important;padding-right:20px!important;}
+      section[style*="padding:120px"]{padding:60px 0!important;}
+      section[style*="padding:100px"]{padding:52px 0!important;}
+      section[style*="padding:80px"]{padding:48px 0!important;}
+
+      /* GAPS */
+      [style*="gap:80px"]{gap:32px!important;}
+      [style*="gap:72px"]{gap:28px!important;}
+
+      /* CONTENT PANELS that have large side padding */
+      [style*="padding:100px 80px"]{padding:40px 24px!important;}
+      [style*="padding:64px 60px"]{padding:36px 24px!important;}
+      [style*="padding:64px 64px"]{padding:36px 24px!important;}
+      [style*="padding:52px 48px"]{padding:36px 24px!important;}
+      [style*="padding:72px 64px"]{padding:36px 24px!important;}
+      [style*="padding:56px 52px"]{padding:36px 24px!important;}
+      [style*="padding:56px 56px"]{padding:36px 24px!important;}
+      [style*="padding:48px 40px"]{padding:32px 20px!important;}
+
+      /* IMAGE STRIP */
+      .isp{flex-direction:column!important;height:auto!important;}
+      .isp>div{width:100%!important;height:240px!important;flex:none!important;}
+
+      /* GRIDS */
+      .tg,.pg,.vg{grid-template-columns:1fr!important;}
+      [style*="grid-template-columns:1fr 1fr"]{grid-template-columns:1fr!important;}
+      [style*="grid-column:1/-1"]{grid-column:1!important;}
+
+      /* IMAGE MIN HEIGHTS in split layouts */
+      [style*="min-height:480px"]{min-height:260px!important;}
+      [style*="min-height:500px"]{min-height:260px!important;}
+      [style*="min-height:420px"]{min-height:240px!important;}
+      [style*="min-height:560px"]{min-height:280px!important;}
+
+      /* GALLERY */
+      .gmc{column-count:2!important;}
+
+      /* FOOTER */
+      .ftc{flex-direction:column!important;gap:32px!important;}
+      footer .ftc>div{flex:none!important;width:100%!important;}
+
+      /* VIDEO */
+      .vg{grid-template-columns:1fr!important;}
+
+      /* FORMS */
+      input,select,textarea{font-size:16px!important;} /* prevents iOS zoom */
+
+      /* QUOTE SECTION */
+      [style*="max-width:860px"]{padding:0 24px!important;}
+      [style*="max-width:960px"]{padding:0 24px!important;}
+
+      /* TESTIMONIAL FULL-WIDTH DARK CARD */
+      .tc>div[style*="flex-direction:row"]{flex-direction:column!important;}
+
+      /* HIDE large decorative numbers */
+      [style*="font-size:80px;font-weight:300;color:rgba(255,255,255"]{display:none!important;}
+
+      /* HERO HEADING */
+      .hcp h1{font-size:clamp(36px,10vw,52px)!important;line-height:1.1!important;}
+    }
+    @media(max-width:480px){
+      .gmc{column-count:1!important;}
+      .isp>div{height:200px!important;}
+      .hearts-wordmark{font-size:18px!important;}
+      .mm a{font-size:22px!important;}
+    }
+    
+    /* ===== BUTTON HOVER INTERACTIONS ===== */
+    a[style*="padding:17px"],a[style*="padding:18px"],a[style*="padding:15px"],a[style*="padding:16px"],
+    a[style*="letter-spacing:.18em"],a[style*="letter-spacing:.16em"],
+    button[style*="letter-spacing"],
+    .koha-btn,.btn-dk,.btn-ol{
+      transition:transform .25s cubic-bezier(.22,1,.36,1), box-shadow .25s ease, letter-spacing .25s ease, font-weight .25s ease !important;
+    }
+    a[style*="padding:17px"]:hover,a[style*="padding:18px"]:hover,a[style*="padding:15px"]:hover,a[style*="padding:16px"]:hover,
+    a[style*="letter-spacing:.18em"]:hover,a[style*="letter-spacing:.16em"]:hover,
+    .koha-btn:hover,.btn-dk:hover,.btn-ol:hover{
+      transform:scale(1.045) !important;
+      box-shadow:0 6px 24px rgba(0,0,0,.18) !important;
+      font-weight:600 !important;
+      letter-spacing:.22em !important;
+    }
+    /* Hero buttons specifically */
+    .hero-btns a{
+      transition:transform .25s cubic-bezier(.22,1,.36,1), background .2s ease, box-shadow .25s ease !important;
+    }
+    .hero-btns a:hover{
+      transform:scale(1.05) !important;
+      box-shadow:0 8px 28px rgba(0,0,0,.25) !important;
+      font-weight:600 !important;
+    }
+    /* Koha nav button */
+    .koha-btn{
+      transition:transform .25s cubic-bezier(.22,1,.36,1), background .2s ease, box-shadow .25s ease !important;
+    }
+    .koha-btn:hover{
+      transform:scale(1.06) !important;
+      box-shadow:0 4px 16px rgba(196,130,74,.4) !important;
+    }
+    /* Read More / text links */
+    .la:hover,.la{
+      transition:gap .25s ease, letter-spacing .25s ease !important;
+    }
+    .la:hover{
+      gap:18px !important;
+      letter-spacing:.22em !important;
+    }
+    
+    /* Centre nav links on desktop */
+    @media(min-width:901px){
+      .nl{position:absolute!important;left:50%!important;top:50%!important;transform:translate(-50%,-50%)!important;}
+    }
+    /* Shielded badge */
+    #shielded-logo img{transition:opacity .2s ease;}
+    #shielded-logo:hover img{opacity:.8;}
+    
+    @media(max-width:1080px){
+      .nl{display:none!important}
+      .nb{display:flex!important}
+      .hearts-reg{display:none!important}
+      #tr-nav-lang{padding:8px 12px!important;font-size:9px!important}
+    }
+  </style>
+<style id="perf-css">#hn-nav{transform:translateZ(0);will-change:transform}</style>
+<style id="mm-acc">.mm{justify-content:flex-start!important;gap:22px!important;padding:120px 24px 48px;overflow-y:auto;box-sizing:border-box}.mm a,.mm summary{font-size:30px!important}.mm details{display:flex;flex-direction:column;align-items:center;text-align:center}.mm summary{list-style:none;cursor:pointer;font-family:'Cormorant Garamond',serif;font-weight:400;color:#1C1C1A;display:inline-flex;align-items:center;gap:10px}.mm summary::-webkit-details-marker{display:none}.mm summary .mm-arr{font-size:14px;color:#B07845;transition:transform .2s}.mm details[open] .mm-arr{transform:rotate(180deg)}.mm .mm-sub{display:flex;flex-direction:column;align-items:center;gap:12px;padding:14px 0 6px}.mm .mm-sub a{font-family:'Manrope',sans-serif!important;font-size:13px!important;letter-spacing:.12em;text-transform:uppercase;color:#7A5A3A!important}</style>
+<style id="mobile-polish">@media(max-width:768px){[style*="font-size:9px"],[style*="font-size:10px"]{font-size:11px!important}[style*="font-size:72px"]{font-size:52px!important}.vol-grid{grid-template-columns:1fr!important}.vol-grid>div{padding:32px 26px!important}}</style>
+</helmet>
+
+<nav style="position:sticky;top:0;z-index:1000;padding:18px 56px 18px 20px;display:flex;align-items:center;justify-content:space-between;background:rgba(253,250,246,.97);backdrop-filter:blur(20px);box-shadow:0 1px 0 rgba(0,0,0,.07);">
+  <a href="index.html" style="display:flex;flex-direction:row;align-items:center;gap:12px;">
+    <img src="hearts-logo-sm.png" alt="H.E.A.R.T.S. logo" style="height:52px;width:auto;flex-shrink:0;"/>
+    <div style="display:flex;flex-direction:column;gap:2px;align-items:center;padding-right:28px;">
+      <span style="font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:500;letter-spacing:.07em;color:#1C1C1A;">H.E.A.R.T.S</span>
+      <span class="hearts-subtitle" style="font-size:13px;margin-top:-7px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:#7A7060;">Charitable Trust</span>
+      <span class="hearts-reg" style="font-size:9px;font-weight:400;letter-spacing:.1em;color:#B3A493;white-space:nowrap;">Registered Charity CC51224</span>
+    </div>
+  </a>
+  <div class="nl" style="display:flex;align-items:center;gap:32px;">
+    <div class="dd"><span style="font-size:15px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:#7A7060;cursor:pointer;display:inline-flex;align-items:center;gap:3px;">About<span class="dd-arr">▾</span></span><div class="dd-menu"><a href="mission.html">Our Mission</a><a href="about.html">About &amp; Values</a><a href="team.html">Our Team &amp; Horses</a></div></div>
+    <div class="dd"><span style="font-size:15px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:#7A7060;cursor:pointer;display:inline-flex;align-items:center;gap:3px;">Our Work<span class="dd-arr">▾</span></span><div class="dd-menu"><a href="services.html">Services</a><a href="programs.html">Programs</a><a href="get-involved.html#research">Research</a><a href="gallery.html">Gallery</a></div></div>
+    <a href="testimonials.html" style="font-size:15px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:#7A7060;">Testimonials</a>
+    <a href="index.html#contact-section" class="na" style="font-size:15px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:#7A7060;transition:all .3s;">Contact</a>
+  </div>
+  <div style="display:flex;align-items:center;gap:14px;">
+    <a href="index.html" id="tr-nav-lang" onclick="try{localStorage.setItem('hearts-lang','mi')}catch(e){}" title="View the homepage in Te Reo Māori" style="border:1px solid rgba(0,0,0,.22);color:#7A7060;font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:9px 18px;line-height:1;display:inline-flex;align-items:center;transition:all .25s;" onmouseover="this.style.background='rgba(0,0,0,.04)';this.style.color='#1C1C1A'" onmouseout="this.style.background='transparent';this.style.color='#7A7060'">EN | Te Reo</a>
+    <a href="get-involved.html#koha" class="koha-btn" style="background:#C4824A;color:white;height:34px;padding:0 20px;font-size:10px;line-height:1;font-weight:600;letter-spacing:.12em;text-transform:uppercase;transition:background .2s;display:inline-flex;align-items:center;justify-content:center;box-sizing:border-box;">Koha ♥</a>
+    <button id="hn-burger" class="nb" aria-label="Menu" style="display:none;flex-direction:column;gap:6px;background:none;border:none;cursor:pointer;padding:4px;"><span style="display:block;width:26px;height:1px;background:#1C1C1A;"></span><span style="display:block;width:18px;height:1px;background:#1C1C1A;"></span></button>
+  </div>
+</nav>
+
+<div id="hn-mm" class="mm">
+  <button id="hn-close" style="position:absolute;top:28px;right:32px;background:none;border:none;font-size:28px;color:#9B8B7B;cursor:pointer;">✕</button>
+  <a href="index.html">Welcome</a>
+  <details><summary>About<span class="mm-arr">▾</span></summary><div class="mm-sub"><a href="mission.html">Our Mission</a><a href="about.html">About &amp; Values</a><a href="team.html">Our Team &amp; Horses</a></div></details>
+  <details><summary>Our Work<span class="mm-arr">▾</span></summary><div class="mm-sub"><a href="services.html">Services</a><a href="programs.html">Programs</a><a href="get-involved.html#research">Research</a><a href="gallery.html">Gallery</a></div></details>
+  <a href="testimonials.html">Testimonials</a>
+  <details><summary>Contact<span class="mm-arr">▾</span></summary><div class="mm-sub"><a href="index.html#contact-section">Contact Us</a><a href="index.html#contact-section" data-subject="Te Mauri Whakapapa o te Hōiho Wānanga">Te Mauri Whakapapa o te Hōiho Wānanga</a><a href="index.html#contact-section" data-subject="Professional Training / Supervision">Professional Training &amp; Supervision</a><a href="index.html#contact-section" data-subject="Workshops & Retreats">Workshops &amp; Retreats</a><a href="https://wearelovingawareness-oss.github.io/Heartsv5/get-involved.html">Volunteering</a><a href="index.html#contact-section" data-subject="Koha / Donation">Support Us / Koha</a><a href="index.html#contact-section" data-subject="General Enquiry">General Enquiry</a></div></details>
+  <a href="get-involved.html#koha">Koha</a>
+</div>
+
+<section style="padding:140px 0 80px;background:#FDFAF6;text-align:center;">
+  <p style="font-size:9px;font-weight:500;letter-spacing:.28em;text-transform:uppercase;color:#B07845;margin-bottom:20px;">Legal</p>
+  <h1 style="font-family:'Cormorant Garamond',serif;font-size:clamp(40px,6vw,72px);font-weight:300;color:#1C1C1A;letter-spacing:-.02em;line-height:1.05;margin-bottom:16px;">Privacy Statement</h1>
+  <p style="font-family:'Cormorant Garamond',serif;font-size:18px;font-style:italic;color:#9B8B7B;">Donor Bill of Rights</p>
+</section>
+
+<section style="background:#F7F3EE;padding:80px 0 120px;">
+  <div class="cw prose" style="max-width:760px;margin:0 auto;padding:0 56px;">
+    <div style="background:white;padding:52px 56px;border:1px solid #EDE4D8;">
+      <p>The H.E.A.R.T.S. Charitable Trust is committed to protecting your privacy and your rights as a donor. As a charitable trust registered under the Charities Act 2005 (CC51224), we maintain high standards for the protection of data to ensure that donor information remains private and is only used for the purpose it was collected.</p>
+
+      <h3>Protecting your privacy</h3>
+      <p>In accordance with the New Zealand Privacy Act, we at H.E.A.R.T.S. Charitable Trust maintain high standards for the protection of data. Your personal information is stored in secure databases in New Zealand. We follow strict security procedures in the storage and disclosure of your personal information.</p>
+      <p>This Statement is regularly reviewed and updated to meet legal requirements for privacy.</p>
+
+      <h3>Personal information</h3>
+      <p>'Personal information' is any information that can identify you. We collect and hold personal information from our donors, supporters, volunteers, contractors, and visitors to our programs. For example, if you are a donor, we would collect your name, address, and email to process your donations accurately.</p>
+      <p>We'll only gather your data when you supply it to us voluntarily. We use this information solely to fulfil your request(s).</p>
+
+      <h3>Credit and debit card security</h3>
+      <p>The H.E.A.R.T.S. Charitable Trust is PCI DSS compliant. We do not store credit or debit card details. All payment processing is handled through secure, compliant third-party providers.</p>
+
+      <h3>Job applicants &amp; volunteers</h3>
+      <p>Information provided through job or volunteer applications is used solely for recruitment purposes and will not be shared with third parties without your consent.</p>
+
+      <h3>The Donor Bill of Rights</h3>
+      <p>As a donor to H.E.A.R.T.S. Charitable Trust, you have the right to:</p>
+      <ul>
+        <li>Be informed of the organisation's mission and how donations are used</li>
+        <li>Know the identity of those serving on the governing board</li>
+        <li>Have access to the most recent financial statements</li>
+        <li>Be assured your gift will be used for the purposes for which it was given</li>
+        <li>Receive appropriate acknowledgement and recognition</li>
+        <li>Be assured that information about your donation is handled with respect and confidentiality</li>
+        <li>Expect that all relationships with individuals representing H.E.A.R.T.S. will be professional</li>
+        <li>Be informed whether those seeking donations are volunteers, employees, or hired contractors</li>
+        <li>Have the opportunity for your name to be deleted from mailing lists</li>
+        <li>Feel free to ask questions and receive prompt, truthful, and forthright answers</li>
+      </ul>
+
+      <h3>Complaints</h3>
+      <p>If you have a concern about how your personal information has been handled, please contact us at <a href="mailto:horsesensetrust@gmail.com" style="color:#B07845;text-decoration:underline;">horsesensetrust@gmail.com</a>. We will respond promptly and work to resolve your concern.</p>
+
+      <div style="border-top:1px solid #EDE4D8;margin-top:44px;padding-top:28px;">
+        <p style="font-size:12px;color:#9B8B7B;">This Privacy Statement was last reviewed in 2024. The H.E.A.R.T.S. Charitable Trust · CC51224 · <a href="terms.html" style="color:#B07845;">Terms &amp; Conditions</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer style="background:#3D5A72;padding:80px 0 40px;">
+  <div class="cw" style="max-width:1100px;margin:0 auto;padding:0 56px;text-align:center;">
+    <p style="font-family:'Cormorant Garamond',serif;font-size:clamp(19px,2.3vw,27px);font-style:italic;font-weight:300;color:#fff;line-height:1.6;max-width:840px;margin:0 auto 18px;">“Mā te rongo, ka mōhio; mā te mōhio, ka mārama; mā te mārama, ka mātau; mā te mātau, ka ora.”</p>
+    <p style="font-size:13px;font-weight:300;color:rgba(255,255,255,.68);line-height:1.7;max-width:640px;margin:0 auto 40px;">Through listening comes knowledge; through knowledge comes understanding; through understanding comes wisdom; through wisdom comes life and wellbeing.</p>
+    <div style="width:46px;height:1px;background:rgba(255,255,255,.25);margin:0 auto 34px;"></div>
+    <div style="display:flex;justify-content:center;gap:14px 30px;flex-wrap:wrap;margin-bottom:34px;">
+      <a href="about.html" style="font-size:11px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.82);transition:color .2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.82)'">About Our Kaupapa</a>
+      <a href="services.html" style="font-size:11px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.82);transition:color .2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.82)'">Our Services</a>
+      <a href="ip.html" style="font-size:11px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.82);transition:color .2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.82)'">IP &amp; Use of Materials</a>
+      <a href="terms.html" style="font-size:11px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.82);transition:color .2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.82)'">Terms of Use</a>
+      <a href="index.html#contact-section" style="font-size:11px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.82);transition:color .2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.82)'">Contact Us</a>
+    </div>
+    <p style="font-size:12px;color:rgba(255,255,255,.82);margin-bottom:8px;">© 2026 H.E.A.R.T.S. Charitable Trust. All rights reserved.</p>
+    <p style="font-size:11px;color:rgba(255,255,255,.6);letter-spacing:.04em;margin-bottom:6px;">Registered Charity CC51224</p>
+    <p style="font-size:11px;font-style:italic;color:rgba(255,255,255,.55);">Grounded in bicultural practice, trauma-informed care, and horse-human healing.</p>
+  </div>
+  <div style="text-align:center;padding:22px 0 6px;border-top:1px solid rgba(255,255,255,.1);margin-top:34px;">
+    <p style="font-size:13px;color:rgba(255,255,255,.6);font-weight:300;">Website proudly made by <a href="https://techwizards.co.nz/" target="_blank" rel="noopener" style="color:rgba(255,255,255,.75);font-weight:400;text-decoration:underline;text-underline-offset:3px;transition:color .2s;" onmouseover="this.style.color='white'" onmouseout="this.style.color='rgba(255,255,255,.75)'">Tech Wizards</a></p>
+  </div>
+</footer>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  componentDidMount() {
+    const burger = document.getElementById('hn-burger');
+    const mm = document.getElementById('hn-mm');
+    if (burger && mm) {
+      const toggle = open => { mm.classList.toggle('open', open); document.body.style.overflow = open ? 'hidden' : ''; };
+      burger.addEventListener('click', () => toggle(!mm.classList.contains('open')));
+      const cl = document.getElementById('hn-close');
+      if (cl) cl.addEventListener('click', () => toggle(false));
+    }
+  }
+}
+</script>
+</body>
+</html>
